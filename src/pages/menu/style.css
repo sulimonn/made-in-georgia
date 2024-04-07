@@ -1,0 +1,41 @@
+.MuiAccordionSummary-content {
+  margin: 0 !important;
+}
+a {
+  cursor: pointer !important;
+}
+.Mui-expanded,
+.MuiAccordionSummary-root {
+  min-height: unset !important;
+}
+.MuiPaper-elevation {
+  display: block;
+}
+.toggle-icon {
+  width: 12px;
+  height: 2px;
+  position: relative;
+  margin-right: 0.5em;
+}
+@media screen and (max-width: 768px) {
+  .toggle-icon {
+    margin-right: 1.3em;
+  }
+}
+.toggle-icon::before,
+.toggle-icon::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+  transition: all 0.3s;
+}
+
+.toggle-icon::before {
+  transform: rotate(90deg);
+}
+
+.open.toggle-icon::before {
+  transform: rotate(0deg);
+}

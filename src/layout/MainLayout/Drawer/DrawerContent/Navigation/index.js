@@ -1,5 +1,5 @@
 // material-ui
-import { Box, Typography } from '@mui/material';
+import { Typography } from '@mui/material';
 
 // project import
 import NavGroup from './NavGroup';
@@ -21,7 +21,7 @@ const Navigation = () => {
     }
   });
 
-  return <Box sx={{ pt: 2 }}>{navGroups}</Box>;
+  return navGroups;
 };
 
 export default Navigation;

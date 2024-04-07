@@ -10,6 +10,7 @@ import { Provider as ReduxProvider } from 'react-redux';
 
 // apex-chart
 import 'assets/third-party/apex-chart.css';
+import 'themes/bahnschrift/index.css';
 
 // project import
 import App from './App';
@@ -23,11 +24,11 @@ const root = createRoot(container); // createRoot(container!) if you use TypeScr
 root.render(
   <StrictMode>
     <ReduxProvider store={store}>
-      <BrowserRouter basename="/free">
+      <BrowserRouter basename="/">
         <App />
       </BrowserRouter>
     </ReduxProvider>
-  </StrictMode>
+  </StrictMode>,
 );
 
 // If you want to start measuring performance in your app, pass a function
