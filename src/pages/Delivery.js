@@ -158,7 +158,12 @@ const Delivery = () => {
               textAlign: 'center',
             }}
           >
-            <img src={Map} alt="map" style={{ width: '100%', objectFit: 'contain' }} />
+            <img
+              src={Map}
+              alt="map"
+              loading="lazy"
+              style={{ width: '100%', objectFit: 'contain' }}
+            />
           </Box>
           <Box
             display="flex"

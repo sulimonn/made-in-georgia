@@ -20,7 +20,7 @@ const Promotion = () => {
       <Grid container spacing={{ xs: 2, sm: 10 }} pt={6}>
         {images.map((image, index) => (
           <Grid item xs={12} sm={6} key={index} sx={{ overflow: 'hidden' }}>
-            <img src={image} alt="imag" style={{ width: '100%' }} />
+            <img loading="lazy" src={image} alt="imag" style={{ width: '100%' }} />
           </Grid>
         ))}
       </Grid>

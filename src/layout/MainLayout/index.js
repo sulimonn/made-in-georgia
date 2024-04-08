@@ -14,6 +14,7 @@ import Header from './Header';
 // types
 import { openDrawer } from 'store/reducers/nav';
 import Footer from './Footer';
+import Loader from 'components/Loader';
 
 // ==============================|| MAIN LAYOUT ||============================== //
 
@@ -21,6 +22,8 @@ const MainLayout = () => {
   const theme = useTheme();
   const matchDownLG = useMediaQuery(theme.breakpoints.down('lg'));
   const dispatch = useDispatch();
+
+  const [loading, setLoading] = useState(true);
 
   const { drawerOpen } = useSelector((state) => state.nav);
 
@@ -37,6 +40,22 @@ const MainLayout = () => {
   useEffect(() => {
     setOpen(drawerOpen);
   }, [drawerOpen]);
+
+  useEffect(() => {
+    // Simulate loading delay
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 2000);
+
+    // Clear the timer when the component unmounts or when loading is done
+    return () => clearTimeout(timer);
+  }, []);
+  if (loading)
+    return (
+      <Box display="flex" alignItems="center" justifyContent="center" height="100vh">
+        <Loader />
+      </Box>
+    );
 
   return (
     <Box sx={{ display: 'block', width: '100%', position: 'relative' }}>

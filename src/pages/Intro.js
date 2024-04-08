@@ -5,7 +5,6 @@ import { Box, Typography, Button } from '@mui/material';
 import Logo from 'components/Logo/Logo';
 
 const Intro = () => {
-  const [loading, setLoading] = React.useState(true);
   return (
     <Box
       id="home"
@@ -20,7 +19,6 @@ const Intro = () => {
       <img
         src={IntroPic}
         alt="intro"
-        onLoad={() => setLoading(false)}
         style={{
           opacity: 0.4,
           zIndex: '-1',
@@ -30,7 +28,6 @@ const Intro = () => {
           position: 'absolute',
           top: 0,
           left: 0,
-          display: loading ? 'none' : 'block',
         }}
       />
       <Box
