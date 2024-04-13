@@ -21,6 +21,7 @@ const Intro = () => {
         alt="intro"
         style={{
           opacity: 0.4,
+          zIndex: -1,
           width: '100%',
           height: '100%',
           objectFit: 'cover',
@@ -31,6 +32,8 @@ const Intro = () => {
       />
       <Box
         sx={{
+          position: 'relative',
+          zIndex: 1,
           pl: 2,
           pb: 20,
           width: { sm: 300, lg: 400 },
