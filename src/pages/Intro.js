@@ -21,7 +21,6 @@ const Intro = () => {
         alt="intro"
         style={{
           opacity: 0.4,
-          zIndex: -1,
           width: '100%',
           height: '100%',
           objectFit: 'cover',
@@ -65,9 +64,9 @@ const Intro = () => {
           variant="contained"
           size="large"
           color="error"
-          sx={{ display: { xs: 'none', lg: 'block' } }}
+          sx={{ display: { xs: 'none', lg: 'block' }, pb: 1, pt: 0.5, px: 4, borderRadius: 3 }}
         >
-          <Typography variant={'h1'} fontWeight="500" textTransform="none">
+          <Typography variant={'h2'} fontWeight="400" textTransform="none">
             Заказать стол
           </Typography>
         </Button>

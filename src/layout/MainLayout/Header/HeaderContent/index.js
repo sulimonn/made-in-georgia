@@ -25,6 +25,7 @@ const HeaderContent = () => {
     >
       <Typography
         component={Link}
+        to="/"
         color="error"
         variant={matchesMd ? 'h3' : 'h2'}
         textTransform="uppercase"

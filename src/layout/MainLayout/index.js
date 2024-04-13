@@ -52,7 +52,13 @@ const MainLayout = () => {
   }, []);
   if (loading)
     return (
-      <Box display="flex" alignItems="center" justifyContent="center" height="100vh">
+      <Box
+        display="flex"
+        alignItems="center"
+        justifyContent="center"
+        height="100vh"
+        sx={{ fontStretch: 'condensed !important' }}
+      >
         <Loader />
       </Box>
     );
