@@ -15,6 +15,7 @@ import Header from './Header';
 import { openDrawer } from 'store/reducers/nav';
 import Footer from './Footer';
 import Loader from 'components/Loader';
+import Intro from 'pages/Intro';
 
 // ==============================|| MAIN LAYOUT ||============================== //
 
@@ -87,7 +88,10 @@ const MainLayout = () => {
         />
       </Box>
       {matchDownLG && <Drawer open={open} handleDrawerToggle={handleDrawerToggle} />}
-      <Header open={open} handleDrawerToggle={handleDrawerToggle} />
+      <Box height="100vh" display="flex" flexDirection="column">
+        <Header open={open} handleDrawerToggle={handleDrawerToggle} />
+        <Intro />
+      </Box>
       <Box component="main" sx={{ width: '100%', flexGrow: 1, flex: 1 }}>
         <Outlet />
       </Box>

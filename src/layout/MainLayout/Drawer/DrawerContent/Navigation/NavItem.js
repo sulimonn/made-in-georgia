@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import { Link } from 'react-scroll';
+import { Link as LinkRouter } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 
 // material-ui
@@ -23,30 +24,36 @@ const NavItem = ({ item, level }) => {
 
   const textColor = 'text.primary';
   const iconSelectedColor = 'text.primary';
+  const linkProps = {
+    activeClass: 'active',
+    spy: true,
+    smooth: true,
+    duration: 500,
+    offset: item.id === 'contacts' ? -610 : 0,
+  };
   return (
-    <Link
-      onClick={() => itemHandler(item.id)}
-      to={item.url.replace('#', '')}
-      smooth
-      spy
-      duration={500}
-      activeClass="active"
-    >
-      {(drawerOpen || (!drawerOpen && level !== 1)) && (
-        <ListItemText
-          sx={{
-            zIndex: 1201,
-            pl: drawerOpen ? `${level * 28}px` : 1.5,
-            py: { xs: 1, sm: 1.5 },
-          }}
-          primary={
-            <Typography variant="h4" sx={{ color: isSelected ? iconSelectedColor : textColor }}>
-              {item.title}
-            </Typography>
-          }
-        />
-      )}
-    </Link>
+    (drawerOpen || (!drawerOpen && level !== 1)) && (
+      <ListItemText
+        sx={{
+          zIndex: 1201,
+          pl: drawerOpen ? `${level * 28}px` : 1.5,
+          py: { xs: 1, sm: 1.5 },
+        }}
+        primary={
+          <Typography
+            component={item?.target ? LinkRouter : Link}
+            target={item?.target}
+            onClick={() => itemHandler(item.id)}
+            to={item.target ? item.url : item.url.replace('#', '')}
+            {...(item?.target ? null : linkProps)}
+            variant="h4"
+            sx={{ color: isSelected ? iconSelectedColor : textColor, textDecoration: 'none' }}
+          >
+            {item.title}
+          </Typography>
+        }
+      />
+    )
   );
 };
 

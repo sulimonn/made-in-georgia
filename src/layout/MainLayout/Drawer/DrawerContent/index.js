@@ -7,6 +7,7 @@ import SimpleBar from 'components/third-party/SimpleBar';
 const DrawerContent = () => (
   <SimpleBar
     sx={{
+      height: 'auto',
       '& .simplebar-content': {
         display: 'flex',
         flexDirection: 'column',

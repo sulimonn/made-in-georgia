@@ -22,6 +22,9 @@ a {
     margin-right: 1.3em;
   }
 }
+a {
+  text-decoration: none !important;
+}
 .toggle-icon::before,
 .toggle-icon::after {
   content: '';

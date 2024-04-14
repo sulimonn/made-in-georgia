@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 import GooglePlay from 'assets/images/icons/googlePlay.png';
 import Phone from 'assets/images/icons/smartphone.svg';
-import Map from 'assets/images/map.png';
+import Map from 'assets/images/map2.png';
 
 import { Box, Typography, Grid } from '@mui/material';
 
@@ -16,21 +16,22 @@ const Delivery = () => {
       <Grid container sx={{ mt: 6 }}>
         <Grid item xs={12} sm={4}>
           <Box sx={{ width: { xs: '85%', sm: '100%' }, m: '0 auto' }}>
-            <Typography variant="h4" textAlign={{ xs: 'left', sm: 'center' }} fontWeight="400">
+            <Typography variant="h3" textAlign={{ xs: 'left', sm: 'center' }} fontWeight="500">
               СПОСОБЫ ЗАКАЗА
             </Typography>
-            <Box display="flex" alignItems="center" gap={5} py={3}>
+            <Box display="flex" alignItems="center" gap={{ xs: 3.5, sm: 5 }} py={3}>
               <img
                 src={Phone}
                 alt="delivery"
+                loading="lazy"
                 style={{ width: 17, height: 'min-content', alignSelf: 'start' }}
               />
               <Box display="flex" flexDirection="column" textAlign="left">
-                <Typography variant="h5" sx={{ pb: 2 }} color="text.primary">
+                <Typography variant="h4" sx={{ pb: 2 }} color="text.primary">
                   У НАС В ПРИЛОЖЕНИИ
                 </Typography>
                 <Typography
-                  variant="body1"
+                  variant="h5"
                   component={Link}
                   to="https://web.telegram.org/a/#467196529"
                   color="text.info"
@@ -42,17 +43,18 @@ const Delivery = () => {
                 </Typography>
               </Box>
             </Box>
-            <Box display="flex" alignItems="center" gap={5} py={3}>
+            <Box display="flex" alignItems="center" gap={{ xs: 3.5, sm: 5 }} py={3}>
               <img
                 src={Phone}
                 alt="delivery"
+                loading="lazy"
                 style={{ width: 17, height: 'min-content', alignSelf: 'start' }}
               />
               <Box display="flex" flexDirection="column" textAlign="left">
-                <Typography variant="h5" sx={{ pb: 2 }} color="text.primary">
+                <Typography variant="h4" sx={{ pb: 2 }} color="text.primary">
                   САМОВЫВОЗ
                 </Typography>{' '}
-                <Typography variant="body1" fontWeight="400" textDecoration="none" target="_blank">
+                <Typography variant="h5" fontWeight="400" textDecoration="none" target="_blank">
                   Позвоните по номеру{' '}
                   <Typography
                     component={Link}
@@ -67,26 +69,26 @@ const Delivery = () => {
             </Box>
 
             <Typography
-              variant="h4"
+              variant="h3"
               color=""
               textAlign={{ xs: 'left', sm: 'center' }}
-              fontWeight="400"
+              fontWeight="500"
               sx={{ pt: 3 }}
             >
               СПОСОБЫ ЗАКАЗА
             </Typography>
-            <Box display="flex" alignItems="center" gap={5} py={3}>
+            <Box display="flex" alignItems="center" gap={{ xs: 3.5, sm: 5 }} py={3}>
               <img
                 src={Phone}
                 alt="delivery"
                 style={{ width: 17, height: 'min-content', alignSelf: 'start' }}
               />
               <Box display="flex" flexDirection="column" textAlign="left">
-                <Typography variant="h5" sx={{ pb: 2 }} color="text.primary">
+                <Typography variant="h4" sx={{ pb: 2 }} color="text.primary">
                   ДОСТАВКА
                 </Typography>
                 <Typography
-                  variant="body1"
+                  variant="h5"
                   fontWeight="400"
                   textTransform="capitalize"
                   color="text.error"
@@ -94,11 +96,11 @@ const Delivery = () => {
                 >
                   москва сити - бесплатно
                 </Typography>
-                <Typography variant="body1" fontWeight="400" sx={{ pt: 0.5 }}>
+                <Typography variant="h5" fontWeight="400" sx={{ pt: 0.5 }}>
                   Время приема заказов с 11:00-22:00
                 </Typography>
                 <Typography
-                  variant="h5"
+                  variant="h4"
                   sx={{ pb: { xs: 0, sm: 2 }, pt: 0.5, width: '60%' }}
                   fontWeight="400"
                   color="text.disabled"
@@ -110,29 +112,29 @@ const Delivery = () => {
                 </Typography>
               </Box>
             </Box>
-            <Box display="flex" alignItems="center" gap={5} pt={{ xs: 2, sm: 5 }}>
+            <Box display="flex" alignItems="center" gap={{ xs: 3.5, sm: 5 }} pt={{ xs: 2, sm: 5 }}>
               <img
                 src={Phone}
                 alt="delivery"
                 style={{ width: 17, height: 'min-content', alignSelf: 'start' }}
               />
               <Box display="flex" flexDirection="column" textAlign="left">
-                <Typography variant="h5" sx={{ pb: 2 }} color="text.primary">
+                <Typography variant="h4" sx={{ pb: 2 }} color="text.primary">
                   ПО ТЕЛЕФОНУ
                 </Typography>
 
                 <Typography
-                  variant="h5"
+                  variant="h4"
                   sx={{ pb: 2, pt: 0.5, width: '70%' }}
                   fontWeight="400"
                   lineHeight={1.1}
                 >
                   Ваш заказ будет готов к выдаче в ресторане
                 </Typography>
-                <Typography variant="body1" fontWeight="400" sx={{ pt: 0.5 }}>
+                <Typography variant="h5" fontWeight="400" sx={{ pt: 0.5 }}>
                   График работы: с 11:00 до 22:00
                 </Typography>
-                <Typography variant="body1" fontWeight="400" sx={{ pt: 0.5 }}>
+                <Typography variant="h5" fontWeight="400" sx={{ pt: 0.5 }}>
                   Адрес: 1-й красногвардейский пр.,д.19, 2 этаж
                 </Typography>
               </Box>
@@ -141,10 +143,10 @@ const Delivery = () => {
         </Grid>
         <Grid item xs={12} sm={8}>
           <Typography
-            variant="h4"
+            variant="h3"
             color=""
             textAlign="center"
-            fontWeight="400"
+            fontWeight="500"
             sx={{ pb: { xs: 5, sm: 2 }, pt: { xs: 7, sm: 0 } }}
           >
             ЗОНА БЕСПЛАТНОЙ ДОСТАВКИ

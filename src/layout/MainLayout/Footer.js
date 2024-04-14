@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { Link as ScrollLink } from 'react-scroll';
 
 // material-ui
 import { Box, Grid, Typography, useMediaQuery } from '@mui/material';
@@ -12,18 +13,23 @@ const FooterContent = (matchDownMD) => {
     <>
       <Typography variant={matchDownMD ? 'h6' : 'h5'} sx={{ mb: 1.5 }}>
         ТЕЛЕФОН:{' '}
-        <a href="tel:+7 (495) 663-68-68" style={{ textDecoration: 'none', color: 'inherit' }}>
+        <Link
+          href="tel:+7 (495) 663-68-68"
+          target="_blank"
+          style={{ textDecoration: 'none', color: 'inherit' }}
+        >
           8 (495) 663-68-68
-        </a>
+        </Link>
       </Typography>
       <Typography variant={matchDownMD ? 'h6' : 'h5'} sx={{ mb: 1.5 }}>
         ПОЧТА:{' '}
-        <a
+        <Link
           href="mailto:Made.in.georgia.rest.com"
+          target="_blank"
           style={{ textDecoration: 'none', color: 'inherit', textTransform: 'lowercase' }}
         >
           Made.in.georgia.rest.com
-        </a>
+        </Link>
       </Typography>
       <Box display="flex" gap={2}>
         <Typography component={Link} to="/" color="text.error" variant="h3">
@@ -69,7 +75,9 @@ const Footer = () => {
           </Grid>
           <Grid item xs={12} md={6}>
             <Box width={{ xs: '120px', md: '162px' }} mx="auto">
-              <Logo />
+              <ScrollLink to="header" activeClass="active" spy smooth duration={500}>
+                <Logo />
+              </ScrollLink>
             </Box>
           </Grid>
           <Grid item xs={12} md={3} sx={{ display: { xs: 'none', md: 'block' } }}>

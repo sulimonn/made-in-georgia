@@ -16,12 +16,7 @@ const Header = ({ open, handleDrawerToggle }) => {
 
   // common header
   const mainHeader = (
-    <Toolbar>
-      <HeaderContent />
-    </Toolbar>
-  );
-  const mobileHeader = (
-    <Toolbar>
+    <Toolbar id="header">
       <HeaderContent />
     </Toolbar>
   );
@@ -41,7 +36,7 @@ const Header = ({ open, handleDrawerToggle }) => {
           {mainHeader}
         </AppBarStyled>
       ) : (
-        <AppBar {...appBar}>{mobileHeader}</AppBar>
+        <AppBar {...appBar}>{mainHeader}</AppBar>
       )}
     </>
   );

@@ -3,6 +3,7 @@ import { Box, useMediaQuery, Typography } from '@mui/material';
 
 // project import
 import { Link } from 'react-scroll';
+import { Link as LinkRouter } from 'react-router-dom';
 import menuItems from 'menu-items/index';
 import { useSelector } from 'react-redux';
 
@@ -13,6 +14,7 @@ const HeaderContent = () => {
 
   const navs = menuItems.items;
   const openItem = useSelector((state) => state.nav.openItem);
+  const linkProps = { activeClass: 'active', spy: true, smooth: true, duration: 500 };
 
   return (
     <Box
@@ -24,7 +26,7 @@ const HeaderContent = () => {
       py={3}
     >
       <Typography
-        component={Link}
+        component={LinkRouter}
         to="/"
         color="error"
         variant={matchesMd ? 'h3' : 'h2'}
@@ -40,14 +42,12 @@ const HeaderContent = () => {
             group.children.map((item) => {
               return (
                 <Typography
-                  activeClass="active"
-                  spy={true}
-                  smooth={true}
-                  duration={500}
-                  to={item.url.replace('#', '')}
+                  {...(item?.target ? null : linkProps)}
+                  to={item?.target ? item.url : item.url.replace('#', '')}
                   key={item.id}
                   variant="h3"
-                  component={Link}
+                  target={item?.target}
+                  component={item?.target ? LinkRouter : Link}
                   fontWeight="400"
                   color={openItem.includes(item.id) ? 'text.primary' : 'text.secondary'}
                   sx={{

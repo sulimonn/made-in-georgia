@@ -17,15 +17,35 @@ const DrawerFooter = () => {
         >
           8 (495) 663-68-68
         </Button>
-        <Button variant="contained" color="error" sx={{ borderRadius: 3 }} size="large">
+        <Button
+          variant="contained"
+          component="a"
+          href="https://wa.me/+79037773433"
+          target="_blank"
+          color="error"
+          sx={{ borderRadius: 3 }}
+          size="large"
+        >
           Заказать стол
         </Button>
       </Box>
       <Box display="flex" gap={2}>
-        <Typography component="a" target="_blank" to="/" color="text.error" variant="h3">
+        <Typography
+          component="a"
+          target="_blank"
+          to="https://www.instagram.com/madeingeorgia/"
+          color="text.error"
+          variant="h3"
+        >
           <InstagramOutlined />
         </Typography>
-        <Typography component="a" target="_blank" to="/" color="text.error" variant="h3">
+        <Typography
+          component="a"
+          target="_blank"
+          to="https://wa.me/+79037773433"
+          color="text.error"
+          variant="h3"
+        >
           <WhatsAppOutlined />
         </Typography>
       </Box>

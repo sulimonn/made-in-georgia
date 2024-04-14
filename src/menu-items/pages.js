@@ -39,7 +39,8 @@ const pages = {
       id: 'loyalty',
       title: 'Программа лояльности',
       type: 'item',
-      url: '#loyalty',
+      target: '_blank',
+      url: 'https://cabinet.statix-pro.ru/forms/made_in_georgia',
     },
   ],
 };

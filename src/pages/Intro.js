@@ -9,7 +9,7 @@ const Intro = () => {
     <Box
       id="home"
       sx={{
-        height: { xs: 'calc(100vh - 10rem)', lg: 'calc(100vh - 7rem)' },
+        flex: 1,
         display: 'flex',
         justifyContent: 'flex-start',
         alignItems: 'center',
@@ -19,11 +19,13 @@ const Intro = () => {
       <img
         src={IntroPic}
         alt="intro"
+        loading="lazy"
         style={{
           opacity: 0.4,
           width: '100%',
           height: '100%',
           objectFit: 'cover',
+          objectPosition: 'left',
           position: 'absolute',
           top: 0,
           left: 0,
@@ -64,6 +66,9 @@ const Intro = () => {
           variant="contained"
           size="large"
           color="error"
+          target="_blank"
+          component="a"
+          href="https://wa.me/+79037773433"
           sx={{ display: { xs: 'none', lg: 'block' }, pb: 1, pt: 0.5, px: 4, borderRadius: 3 }}
         >
           <Typography variant={'h2'} fontWeight="400" textTransform="none">
