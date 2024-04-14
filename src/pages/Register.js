@@ -21,6 +21,7 @@ const StyledInput = ({ label, ...props }) => {
           borderRight: 'none',
           borderLeft: 'none',
           borderBottom: '1px solid #ccc',
+          borderRadius: '0px',
           background: 'none',
           outline: 'none',
           color: Boolean(props?.errors?.phoneNumber) ? 'red' : 'inherit',
