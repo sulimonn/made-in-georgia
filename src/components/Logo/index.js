@@ -3,24 +3,22 @@ import { Link } from 'react-router-dom';
 
 // material-ui
 import { ButtonBase, Box } from '@mui/material';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 
 // project import
 import Logo from './Logo';
-import config from 'config';
-import { activeItem } from 'store/reducers/nav';
+import { openDrawer } from 'store/reducers/nav';
 
 // ==============================|| MAIN LOGO ||============================== //
 
 const LogoSection = ({ sx, to }) => {
-  const { defaultId } = useSelector((state) => state.nav);
   const dispatch = useDispatch();
   return (
     <ButtonBase
       disableRipple
       component={Link}
-      onClick={() => dispatch(activeItem({ openItem: [defaultId] }))}
-      to={!to ? config.defaultPath : to}
+      to={'/'}
+      onClick={() => dispatch(openDrawer({ drawerOpen: false }))}
       sx={sx}
     >
       <Box sx={{ width: '50%', marginRight: 'auto' }}>
