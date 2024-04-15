@@ -9,7 +9,6 @@ import { useTheme } from '@mui/material/styles';
 import Panoram from 'assets/images/панорама.png';
 import Menu from './menu';
 import Delivery from './Delivery';
-import About from './About';
 import Register from './Register';
 
 const Pages = () => {
@@ -34,7 +33,6 @@ const Pages = () => {
       </Box>
       <Menu />
       <Delivery />
-      <About />
       <Register />
     </>
   );

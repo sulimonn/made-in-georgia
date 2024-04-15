@@ -3,6 +3,10 @@ import { Link } from 'react-router-dom';
 
 import GooglePlay from 'assets/images/icons/googlePlay.png';
 import Phone from 'assets/images/icons/smartphone.svg';
+import selfcall from 'assets/images/icons/selfcall.svg';
+import Contact from 'assets/images/icons/contact.svg';
+import DeliveryPic from 'assets/images/icons/delivery.svg';
+import Telegram from 'assets/images/icons/telegram.svg';
 import Map from 'assets/images/map2.png';
 
 import { Box, Typography, Grid } from '@mui/material';
@@ -24,7 +28,7 @@ const Delivery = () => {
                 src={Phone}
                 alt="delivery"
                 loading="lazy"
-                style={{ width: 17, height: 'min-content', alignSelf: 'start' }}
+                style={{ width: 17, height: 'min-content', alignSelf: 'start', marginTop: '5px' }}
               />
               <Box display="flex" flexDirection="column" textAlign="left">
                 <Typography variant="h4" sx={{ pb: 2 }} color="text.primary">
@@ -35,31 +39,43 @@ const Delivery = () => {
                   component={Link}
                   to="https://web.telegram.org/a/#467196529"
                   color="text.info"
-                  fontWeight="400"
-                  sx={{ pt: 0.5, textDecoration: 'none' }}
+                  fontWeight="500"
+                  sx={{
+                    pt: 0.5,
+                    textDecoration: 'none',
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: 1,
+                  }}
                   target="_blank"
                 >
-                  https://web.telegram.org/a/#467196529
+                  <img
+                    src={Telegram}
+                    alt="telegram"
+                    loading="lazy"
+                    style={{ width: 27, height: 'min-content', alignSelf: 'start' }}
+                  />{' '}
+                  Телеграм
                 </Typography>
               </Box>
             </Box>
             <Box display="flex" alignItems="center" gap={{ xs: 3.5, sm: 5 }} py={3}>
               <img
-                src={Phone}
+                src={Contact}
                 alt="delivery"
                 loading="lazy"
-                style={{ width: 17, height: 'min-content', alignSelf: 'start' }}
+                style={{ width: 23, height: 'min-content', alignSelf: 'start', marginTop: '5px' }}
               />
               <Box display="flex" flexDirection="column" textAlign="left">
                 <Typography variant="h4" sx={{ pb: 2 }} color="text.primary">
-                  САМОВЫВОЗ
+                  ПО ТЕЛЕФОНУ
                 </Typography>{' '}
                 <Typography variant="h5" fontWeight="400" textDecoration="none" target="_blank">
                   Позвоните по номеру{' '}
                   <Typography
                     component={Link}
                     to="tel:+7 (495) 663-68-68"
-                    sx={{ textDecoration: 'none' }}
+                    sx={{ textDecoration: 'none', display: { xs: 'block', sm: 'inline' } }}
                     color="text.success"
                   >
                     8 (495) 663-68-68
@@ -79,9 +95,9 @@ const Delivery = () => {
             </Typography>
             <Box display="flex" alignItems="center" gap={{ xs: 3.5, sm: 5 }} py={3}>
               <img
-                src={Phone}
+                src={DeliveryPic}
                 alt="delivery"
-                style={{ width: 17, height: 'min-content', alignSelf: 'start' }}
+                style={{ width: 23, height: 'min-content', alignSelf: 'start', marginTop: '5px' }}
               />
               <Box display="flex" flexDirection="column" textAlign="left">
                 <Typography variant="h4" sx={{ pb: 2 }} color="text.primary">
@@ -114,13 +130,13 @@ const Delivery = () => {
             </Box>
             <Box display="flex" alignItems="center" gap={{ xs: 3.5, sm: 5 }} pt={{ xs: 2, sm: 5 }}>
               <img
-                src={Phone}
-                alt="delivery"
-                style={{ width: 17, height: 'min-content', alignSelf: 'start' }}
+                src={selfcall}
+                alt="selfcall"
+                style={{ width: 23, height: 'min-content', alignSelf: 'start', marginTop: '3px' }}
               />
               <Box display="flex" flexDirection="column" textAlign="left">
                 <Typography variant="h4" sx={{ pb: 2 }} color="text.primary">
-                  ПО ТЕЛЕФОНУ
+                  САМОВЫВОЗ
                 </Typography>
 
                 <Typography
@@ -147,7 +163,8 @@ const Delivery = () => {
             color=""
             textAlign="center"
             fontWeight="500"
-            sx={{ pb: { xs: 5, sm: 2 }, pt: { xs: 7, sm: 0 } }}
+            fontSize={{ xs: '1.25rem', sm: '1.7rem' }}
+            sx={{ pb: { xs: 4, sm: 2 }, pt: { xs: 7, sm: 0 } }}
           >
             ЗОНА БЕСПЛАТНОЙ ДОСТАВКИ
           </Typography>
@@ -176,14 +193,15 @@ const Delivery = () => {
             flexDirection={{ xs: 'column', sm: 'row' }}
           >
             <Typography
-              to="https://apps.apple.com/us/app/whatsapp-messenger/id310633997?itsct=apps_box_badge&amp;itscg=30200"
+              to="https://apps.apple.com/ru/app/made-in-georgia-%D1%80%D0%B5%D1%81%D1%82%D0%BE%D1%80%D0%B0%D0%BD/id6479214865"
               target="_blank"
               rel="noreferrer"
               component={Link}
               sx={{
                 display: 'inline-block',
                 overflow: 'hidden',
-                width: { xs: '150px', sm: '250px' },
+                height: { xs: 'auto', sm: '60px' },
+                width: { xs: '150px', sm: 'auto' },
               }}
             >
               <img
@@ -199,12 +217,13 @@ const Delivery = () => {
             <Typography
               component={Link}
               rel="noreferrer"
-              to="https://play.google.com/store/apps/details?id=com.whatsapp"
+              to="https://play.google.com/store/apps/details?id=com.madeingeorgia"
               target="_blank"
               sx={{
                 display: 'inline-block',
                 overflow: 'hidden',
-                width: { xs: '150px', sm: '250px' },
+                height: { xs: 'auto', sm: '60px' },
+                width: { xs: '150px', sm: 'auto' },
               }}
             >
               <img

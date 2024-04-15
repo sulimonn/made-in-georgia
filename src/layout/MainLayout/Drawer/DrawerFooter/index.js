@@ -11,6 +11,7 @@ const DrawerFooter = () => {
           variant="contained"
           component="a"
           href="tel:+74956636868"
+          target="_blank"
           color="error"
           sx={{ borderRadius: 3, width: 'fit-content' }}
           size="large"
@@ -33,7 +34,7 @@ const DrawerFooter = () => {
         <Typography
           component="a"
           target="_blank"
-          to="https://www.instagram.com/madeingeorgia/"
+          href="https://www.instagram.com/made.in.georgia.rest/"
           color="text.error"
           variant="h3"
         >
@@ -42,7 +43,7 @@ const DrawerFooter = () => {
         <Typography
           component="a"
           target="_blank"
-          to="https://wa.me/+79037773433"
+          href="https://wa.me/+79037773433"
           color="text.error"
           variant="h3"
         >
