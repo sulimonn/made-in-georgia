@@ -34,29 +34,35 @@ const Delivery = () => {
                 <Typography variant="h4" sx={{ pb: 2 }} color="text.primary">
                   У НАС В ПРИЛОЖЕНИИ
                 </Typography>
-                <Typography
-                  variant="h5"
-                  component={Link}
-                  to="https://web.telegram.org/a/#467196529"
-                  color="text.info"
-                  fontWeight="500"
+                <Box
                   sx={{
                     pt: 0.5,
-                    textDecoration: 'none',
                     display: 'flex',
                     alignItems: 'center',
                     gap: 1,
                   }}
+                  component={Link}
+                  to="https://web.telegram.org/a/#467196529"
                   target="_blank"
                 >
                   <img
                     src={Telegram}
                     alt="telegram"
                     loading="lazy"
-                    style={{ width: 27, height: 'min-content', alignSelf: 'start' }}
-                  />{' '}
-                  Телеграм
-                </Typography>
+                    style={{ width: 27, height: '90%', alignSelf: 'start' }}
+                  />
+                  <Typography
+                    variant="h5"
+                    color="text.info"
+                    fontWeight="500"
+                    sx={{
+                      textDecoration: 'none',
+                    }}
+                  >
+                    {' '}
+                    Телеграм
+                  </Typography>
+                </Box>
               </Box>
             </Box>
             <Box display="flex" alignItems="center" gap={{ xs: 3.5, sm: 5 }} py={3}>
