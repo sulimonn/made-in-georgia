@@ -141,7 +141,7 @@ const Menu = () => {
           label="Меню"
         />
         <Divider
-          sx={{ borderWidth: { xs: 2, sm: 4 }, my: 2.5, mx: { xs: 0.6, sm: 2 } }}
+          sx={{ borderWidth: { xs: 2, sm: 4 }, my: { xs: 2.35, sm: 2.5 }, mx: { xs: 0.6, sm: 2 } }}
           orientation="vertical"
           variant="middle"
           flexItem
