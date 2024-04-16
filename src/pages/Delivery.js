@@ -1,17 +1,29 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 import GooglePlay from 'assets/images/icons/googlePlay.png';
+import AppleStore from 'assets/images/icons/applestore.png';
 import Phone from 'assets/images/icons/smartphone.svg';
 import selfcall from 'assets/images/icons/selfcall.svg';
 import Contact from 'assets/images/icons/contact.svg';
 import DeliveryPic from 'assets/images/icons/delivery.svg';
-import Telegram from 'assets/images/icons/telegram.svg';
-import Map from 'assets/images/map2.png';
 
 import { Box, Typography, Grid } from '@mui/material';
 
 const Delivery = () => {
+  useEffect(() => {
+    const script = document.createElement('script');
+    script.type = 'text/javascript';
+    script.charset = 'utf-8';
+    script.async = true;
+    script.src =
+      'https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A45c51f39158fd212da4e6fa3c5db59bc82d6504f87f92236d2ad702253309e02&width=100%25&height=100%&lang=ru_RU&scroll=true';
+
+    const map = document.getElementById('map');
+    if (map && !map.hasChildNodes()) {
+      map.appendChild(script);
+    }
+  }, []);
   return (
     <Box id="delivery" width={{ xs: '100%', sm: '85%' }} mx="auto" mb={{ xs: 10, sm: 15 }}>
       <Typography variant="h1" textAlign="center" fontSize={{ xs: '2.5rem', sm: '4rem' }}>
@@ -34,41 +46,57 @@ const Delivery = () => {
                 <Typography variant="h4" sx={{ pb: 2 }} color="text.primary">
                   У НАС В ПРИЛОЖЕНИИ
                 </Typography>
+
                 <Box
-                  sx={{
-                    px: 1,
-                    py: 0.8,
-                    display: 'grid',
-                    alignItems: 'center',
-                    gridTemplateColumns: { xs: '30px 1fr', sm: '30px 1fr' },
-                    gap: 1,
-                    borderColor: 'text.secondary',
-                    borderRadius: 2,
-                    width: 'min-content',
-                  }}
-                  component={Link}
-                  to="https://web.telegram.org/a/#467196529"
-                  target="_blank"
+                  display="flex"
+                  alignItems="center"
+                  gap={{ xs: 1 }}
+                  justifyContent="center"
+                  flexDirection={'column'}
                 >
-                  <img
-                    src={Telegram}
-                    alt="telegram"
-                    loading="lazy"
-                    style={{ width: '100%', height: '90%', alignSelf: 'center' }}
-                  />
                   <Typography
-                    variant="h4"
-                    color="text.primary"
-                    fontWeight="400"
+                    to="https://apps.apple.com/ru/app/made-in-georgia-%D1%80%D0%B5%D1%81%D1%82%D0%BE%D1%80%D0%B0%D0%BD/id6479214865"
+                    target="_blank"
+                    rel="noreferrer"
+                    component={Link}
                     sx={{
-                      textDecoration: 'none',
-                      width: 'min-content',
-                      lineHeight: 1,
-                      pr: 0.5,
+                      display: 'inline-block',
+                      overflow: 'hidden',
+                      height: { xs: 'auto', sm: '50px' },
+                      width: { xs: '150px', sm: 'auto' },
                     }}
                   >
-                    {' '}
-                    Телеграм
+                    <img
+                      src={AppleStore}
+                      alt="Download on the App Store"
+                      style={{
+                        width: '100%',
+                        height: '100%',
+                        objectFit: 'contain',
+                      }}
+                    />
+                  </Typography>
+                  <Typography
+                    component={Link}
+                    rel="noreferrer"
+                    to="https://play.google.com/store/apps/details?id=com.madeingeorgia"
+                    target="_blank"
+                    sx={{
+                      display: 'inline-block',
+                      overflow: 'hidden',
+                      height: { xs: 'auto', sm: '50px' },
+                      width: { xs: '150px', sm: 'auto' },
+                    }}
+                  >
+                    <img
+                      src={GooglePlay}
+                      alt="Get it on Google Play"
+                      style={{
+                        width: '100%',
+                        height: '100%',
+                        objectFit: 'contain',
+                      }}
+                    />
                   </Typography>
                 </Box>
               </Box>
@@ -142,7 +170,7 @@ const Delivery = () => {
                 </Typography>
               </Box>
             </Box>
-            <Box display="flex" alignItems="center" gap={{ xs: 3.5, sm: 5 }} pt={{ xs: 2, sm: 5 }}>
+            <Box display="flex" alignItems="center" gap={{ xs: 3.5, sm: 5 }} pt={{ xs: 2 }}>
               <img
                 src={selfcall}
                 alt="selfcall"
@@ -178,26 +206,20 @@ const Delivery = () => {
             textAlign="center"
             fontWeight="500"
             fontSize={{ xs: '1.25rem', sm: '1.7rem' }}
-            sx={{ pb: { xs: 4, sm: 2 }, pt: { xs: 7, sm: 0 } }}
+            sx={{ pb: { xs: 4, sm: 4 }, pt: { xs: 7, sm: 0 } }}
           >
             ЗОНА БЕСПЛАТНОЙ ДОСТАВКИ
           </Typography>
           <Box
-            maxHeight="630px"
             sx={{
               overflow: 'hidden',
               width: { xs: '100%', sm: '90%' },
+              height: { xs: '350px', sm: '670px' },
               mx: 'auto',
               textAlign: 'center',
             }}
-          >
-            <img
-              src={Map}
-              alt="map"
-              loading="lazy"
-              style={{ width: '100%', objectFit: 'contain' }}
-            />
-          </Box>
+            id="map"
+          ></Box>
           <Box
             display="flex"
             alignItems="center"
@@ -219,7 +241,7 @@ const Delivery = () => {
               }}
             >
               <img
-                src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83&amp;releaseDate=1241395200"
+                src={AppleStore}
                 alt="Download on the App Store"
                 style={{
                   width: '100%',
