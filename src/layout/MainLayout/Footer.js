@@ -14,7 +14,7 @@ const FooterContent = (matchDownMD) => {
       <Typography variant={matchDownMD ? 'h6' : 'h5'} sx={{ mb: 1.5 }}>
         ТЕЛЕФОН:{' '}
         <Link
-          href="tel:+7 (495) 663-68-68"
+          href="tel:+74956636868"
           target="_blank"
           style={{ textDecoration: 'none', color: 'inherit' }}
         >
@@ -24,7 +24,7 @@ const FooterContent = (matchDownMD) => {
       <Typography variant={matchDownMD ? 'h6' : 'h5'} sx={{ mb: 1.5 }}>
         ПОЧТА:{' '}
         <Link
-          href="mailto:Made.in.georgia.rest.com"
+          href="mailto:made.in.georgia.rest.com"
           target="_blank"
           style={{ textDecoration: 'none', color: 'inherit', textTransform: 'lowercase' }}
         >
@@ -32,10 +32,20 @@ const FooterContent = (matchDownMD) => {
         </Link>
       </Typography>
       <Box display="flex" gap={2}>
-        <Typography component={Link} to="/" color="text.error" variant="h3">
+        <Typography
+          component={Link}
+          to="https://www.instagram.com/made.in.georgia.rest/"
+          color="text.error"
+          variant="h3"
+        >
           <InstagramOutlined />
         </Typography>
-        <Typography component={Link} to="/" color="text.error" variant="h3">
+        <Typography
+          component={Link}
+          to="https://wa.me/+74956636868"
+          color="text.error"
+          variant="h3"
+        >
           <WhatsAppOutlined />
         </Typography>
       </Box>

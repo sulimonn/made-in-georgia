@@ -68,7 +68,7 @@ const Intro = () => {
           color="error"
           target="_blank"
           component="a"
-          href="https://wa.me/+79037773433"
+          href="https://wa.me/+74956636868"
           sx={{ display: { xs: 'none', lg: 'block' }, pb: 1, pt: 0.5, px: 4, borderRadius: 3 }}
         >
           <Typography variant={'h2'} fontWeight="400" textTransform="none">

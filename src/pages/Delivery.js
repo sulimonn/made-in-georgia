@@ -36,10 +36,17 @@ const Delivery = () => {
                 </Typography>
                 <Box
                   sx={{
-                    pt: 0.5,
-                    display: 'flex',
-                    alignItems: 'center',
+                    px: 1,
+                    py: 0.8,
+                    display: 'grid',
+                    alignItems: 'flex-end',
+                    gridTemplateColumns: '1fr 1fr',
+                    gridTemplateRows: '30px',
                     gap: 1,
+                    border: '0.5px solid',
+                    borderColor: 'text.secondary',
+                    borderRadius: 2,
+                    width: 'min-content',
                   }}
                   component={Link}
                   to="https://web.telegram.org/a/#467196529"
@@ -49,14 +56,17 @@ const Delivery = () => {
                     src={Telegram}
                     alt="telegram"
                     loading="lazy"
-                    style={{ width: 27, height: '90%', alignSelf: 'start' }}
+                    style={{ width: '100%', height: '90%', alignSelf: 'start' }}
                   />
                   <Typography
-                    variant="h5"
-                    color="text.info"
-                    fontWeight="500"
+                    variant="h4"
+                    color="text.primary"
+                    fontWeight="400"
                     sx={{
                       textDecoration: 'none',
+                      width: 'min-content',
+                      lineHeight: 1,
+                      pr: 0.5,
                     }}
                   >
                     {' '}

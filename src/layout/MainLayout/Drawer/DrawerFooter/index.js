@@ -21,7 +21,7 @@ const DrawerFooter = () => {
         <Button
           variant="contained"
           component="a"
-          href="https://wa.me/+79037773433"
+          href="https://wa.me/+74956636868"
           target="_blank"
           color="error"
           sx={{ borderRadius: 3 }}
@@ -43,7 +43,7 @@ const DrawerFooter = () => {
         <Typography
           component="a"
           target="_blank"
-          href="https://wa.me/+79037773433"
+          href="https://wa.me/+74956636868"
           color="text.error"
           variant="h3"
         >
