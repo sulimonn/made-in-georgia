@@ -29,7 +29,7 @@ const Intro = () => {
           width: isSM ? '100%' : '120%',
           height: isSM ? '100%' : '113%',
           objectFit: 'cover',
-          objectPosition: 'left',
+          objectPosition: 'left bottom',
           position: 'absolute',
           top: 0,
           left: 0,
@@ -72,7 +72,7 @@ const Intro = () => {
           color="error"
           target="_blank"
           component="a"
-          href="https://wa.me/+74956636868"
+          href="https://wa.me/+79161366868"
           sx={{ display: { xs: 'none', lg: 'block' }, pb: 1, pt: 0.5, px: 4, borderRadius: 3 }}
         >
           <Typography variant={'h2'} fontWeight="400" textTransform="none">

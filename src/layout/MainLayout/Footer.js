@@ -42,7 +42,7 @@ const FooterContent = (matchDownMD) => {
         </Typography>
         <Typography
           component={Link}
-          to="https://wa.me/+74956636868"
+          to="https://wa.me/+79161366868"
           color="text.error"
           variant="h3"
         >
