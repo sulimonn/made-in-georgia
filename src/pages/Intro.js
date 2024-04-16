@@ -1,10 +1,13 @@
 import React from 'react';
 
 import IntroPic from 'assets/images/intro.png';
-import { Box, Typography, Button } from '@mui/material';
+import { Box, Typography, Button, useMediaQuery } from '@mui/material';
+import { useTheme } from '@mui/material/styles';
 import Logo from 'components/Logo/Logo';
 
 const Intro = () => {
+  const theme = useTheme();
+  const isSM = useMediaQuery(theme.breakpoints.up('sm'), {});
   return (
     <Box
       id="home"
@@ -14,6 +17,7 @@ const Intro = () => {
         justifyContent: 'flex-start',
         alignItems: 'center',
         position: 'relative',
+        overflow: 'hidden',
       }}
     >
       <img
@@ -22,8 +26,8 @@ const Intro = () => {
         loading="lazy"
         style={{
           opacity: 0.4,
-          width: '100%',
-          height: '100%',
+          width: isSM ? '100%' : '120%',
+          height: isSM ? '100%' : '113%',
           objectFit: 'cover',
           objectPosition: 'left',
           position: 'absolute',
