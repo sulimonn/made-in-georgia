@@ -13,7 +13,7 @@ import { Box, Typography, Grid } from '@mui/material';
 
 const Delivery = () => {
   return (
-    <Box id="delivery" width={{ xs: '100%', sm: '85%' }} mx="auto">
+    <Box id="delivery" width={{ xs: '100%', sm: '85%' }} mx="auto" mb={{ xs: 10, sm: 15 }}>
       <Typography variant="h1" textAlign="center" fontSize={{ xs: '2.5rem', sm: '4rem' }}>
         Доставка
       </Typography>
@@ -39,11 +39,9 @@ const Delivery = () => {
                     px: 1,
                     py: 0.8,
                     display: 'grid',
-                    alignItems: 'flex-end',
-                    gridTemplateColumns: '1fr 1fr',
-                    gridTemplateRows: '30px',
+                    alignItems: 'center',
+                    gridTemplateColumns: { xs: '30px 1fr', sm: '30px 1fr' },
                     gap: 1,
-                    border: '0.5px solid',
                     borderColor: 'text.secondary',
                     borderRadius: 2,
                     width: 'min-content',
@@ -56,7 +54,7 @@ const Delivery = () => {
                     src={Telegram}
                     alt="telegram"
                     loading="lazy"
-                    style={{ width: '100%', height: '90%', alignSelf: 'start' }}
+                    style={{ width: '100%', height: '90%', alignSelf: 'center' }}
                   />
                   <Typography
                     variant="h4"
