@@ -27,11 +27,11 @@ const Intro = () => {
         style={{
           opacity: 0.4,
           width: isSM ? '100%' : '120%',
-          height: isSM ? '100%' : '113%',
+          height: isSM ? '100%' : '120%',
           objectFit: 'cover',
           objectPosition: 'left bottom',
           position: 'absolute',
-          top: 0,
+          bottom: 0,
           left: 0,
         }}
       />

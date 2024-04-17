@@ -10,6 +10,59 @@ import DeliveryPic from 'assets/images/icons/delivery.svg';
 
 import { Box, Typography, Grid } from '@mui/material';
 
+const stores = (
+  <>
+    <Typography
+      to="https://apps.apple.com/ru/app/made-in-georgia-%D1%80%D0%B5%D1%81%D1%82%D0%BE%D1%80%D0%B0%D0%BD/id6479214865"
+      target="_blank"
+      rel="noreferrer"
+      component={Link}
+      sx={{
+        display: 'inline-block',
+        overflow: 'hidden',
+        height: { xs: 'auto', sm: '60px' },
+        width: { xs: '150px', sm: 'fit-content' },
+      }}
+    >
+      <img
+        src={AppleStore}
+        alt="Download on the App Store"
+        style={{
+          maxWidth: '100%',
+          maxHeight: '100%',
+          width: 'auto',
+          height: 'auto',
+          objectFit: 'contain',
+        }}
+      />
+    </Typography>
+    <Typography
+      component={Link}
+      rel="noreferrer"
+      to="https://play.google.com/store/apps/details?id=com.madeingeorgia"
+      target="_blank"
+      sx={{
+        display: 'inline-block',
+        overflow: 'hidden',
+        height: { xs: 'auto', sm: '60px' },
+        width: { xs: '150px', sm: 'fit-content' },
+      }}
+    >
+      <img
+        src={GooglePlay}
+        alt="Get it on Google Play"
+        style={{
+          maxWidth: '100%',
+          maxHeight: '100%',
+          width: 'auto',
+          height: 'auto',
+          objectFit: 'contain',
+        }}
+      />
+    </Typography>
+  </>
+);
+
 const Delivery = () => {
   useEffect(() => {
     const script = document.createElement('script');
@@ -54,50 +107,7 @@ const Delivery = () => {
                   justifyContent="center"
                   flexDirection={'column'}
                 >
-                  <Typography
-                    to="https://apps.apple.com/ru/app/made-in-georgia-%D1%80%D0%B5%D1%81%D1%82%D0%BE%D1%80%D0%B0%D0%BD/id6479214865"
-                    target="_blank"
-                    rel="noreferrer"
-                    component={Link}
-                    sx={{
-                      display: 'inline-block',
-                      overflow: 'hidden',
-                      height: { xs: 'auto', sm: '50px' },
-                      width: { xs: '150px', sm: 'auto' },
-                    }}
-                  >
-                    <img
-                      src={AppleStore}
-                      alt="Download on the App Store"
-                      style={{
-                        width: '100%',
-                        height: '100%',
-                        objectFit: 'contain',
-                      }}
-                    />
-                  </Typography>
-                  <Typography
-                    component={Link}
-                    rel="noreferrer"
-                    to="https://play.google.com/store/apps/details?id=com.madeingeorgia"
-                    target="_blank"
-                    sx={{
-                      display: 'inline-block',
-                      overflow: 'hidden',
-                      height: { xs: 'auto', sm: '50px' },
-                      width: { xs: '150px', sm: 'auto' },
-                    }}
-                  >
-                    <img
-                      src={GooglePlay}
-                      alt="Get it on Google Play"
-                      style={{
-                        width: '100%',
-                        height: '100%',
-                        objectFit: 'contain',
-                      }}
-                    />
-                  </Typography>
+                  {stores}
                 </Box>
               </Box>
             </Box>
@@ -223,55 +233,12 @@ const Delivery = () => {
           <Box
             display="flex"
             alignItems="center"
-            gap={{ xs: 1, sm: 5 }}
+            gap={{ xs: 1, sm: 3 }}
             py={3}
             justifyContent="center"
             flexDirection={{ xs: 'column', sm: 'row' }}
           >
-            <Typography
-              to="https://apps.apple.com/ru/app/made-in-georgia-%D1%80%D0%B5%D1%81%D1%82%D0%BE%D1%80%D0%B0%D0%BD/id6479214865"
-              target="_blank"
-              rel="noreferrer"
-              component={Link}
-              sx={{
-                display: 'inline-block',
-                overflow: 'hidden',
-                height: { xs: 'auto', sm: '60px' },
-                width: { xs: '150px', sm: 'auto' },
-              }}
-            >
-              <img
-                src={AppleStore}
-                alt="Download on the App Store"
-                style={{
-                  width: '100%',
-                  height: '100%',
-                  objectFit: 'contain',
-                }}
-              />
-            </Typography>
-            <Typography
-              component={Link}
-              rel="noreferrer"
-              to="https://play.google.com/store/apps/details?id=com.madeingeorgia"
-              target="_blank"
-              sx={{
-                display: 'inline-block',
-                overflow: 'hidden',
-                height: { xs: 'auto', sm: '60px' },
-                width: { xs: '150px', sm: 'auto' },
-              }}
-            >
-              <img
-                src={GooglePlay}
-                alt="Get it on Google Play"
-                style={{
-                  width: '100%',
-                  height: '100%',
-                  objectFit: 'contain',
-                }}
-              />
-            </Typography>
+            {stores}
           </Box>
         </Grid>
       </Grid>
