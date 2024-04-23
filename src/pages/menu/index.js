@@ -71,6 +71,7 @@ const Menu = () => {
             variant={isSmallScreen ? 'h5' : 'h3'}
             alignSelf="center"
             lineHeight={0.9}
+            textTransform="uppercase"
             fontWeight="400"
             sx={{ px: { xs: 3, sm: 0 } }}
           >
@@ -116,7 +117,9 @@ const Menu = () => {
               {child.title}
             </Typography>
             <Typography variant={isSmallScreen ? 'subtitle2' : 'h5'} fontWeight="400">
-              {child.mass}г/{child.price}
+              {child.mass}
+              {child.mass !== '' && '/'}
+              {child.price}
             </Typography>
           </Box>
         ))}
@@ -133,7 +136,7 @@ const Menu = () => {
         indicatorColor="none"
       >
         <Typography
-          variant={isSmallScreen ? 'h3' : 'h1'}
+          variant={isSmallScreen ? 'h4' : 'h1'}
           textTransform="uppercase"
           fontWeight="500"
           component={Tab}
@@ -141,13 +144,13 @@ const Menu = () => {
           label="Меню"
         />
         <Divider
-          sx={{ borderWidth: { xs: 2, sm: 4 }, my: { xs: 2.35, sm: 2.5 }, mx: { xs: 0.6, sm: 2 } }}
+          sx={{ borderWidth: { xs: 2, sm: 4 }, my: { xs: 2, sm: 2.5 }, mx: { xs: 0, sm: 2 } }}
           orientation="vertical"
           variant="middle"
           flexItem
         />
         <Typography
-          variant={isSmallScreen ? 'h3' : 'h1'}
+          variant={isSmallScreen ? 'h4' : 'h1'}
           textTransform="uppercase"
           whiteSpace="nowrap"
           fontWeight="500"
