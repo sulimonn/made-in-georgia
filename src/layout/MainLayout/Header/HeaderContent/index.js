@@ -23,8 +23,8 @@ const HeaderContent = () => {
       justifyContent="space-between"
       alignItems="baseline"
       gap={14}
-      py={3}
-      minHeight={{ xs: '90px', lg: 'auto' }}
+      py={{ xs: 1.5, sm: 3 }}
+      minHeight={{ xs: '84px', lg: 'auto' }}
     >
       {!matchesMd && (
         <Box display="flex" flex={1} alignItems="center" justifyContent="space-between">
@@ -79,9 +79,10 @@ const HeaderContent = () => {
           display: { xs: 'none', lg: 'block' },
           borderRadius: 3,
           backgroundColor: 'transparent !important',
+          p: 0,
         }}
       >
-        <Typography variant={'h3'} fontWeight="400" textTransform="none">
+        <Typography variant={'h3'} fontWeight="400" textTransform="none" color="text.error">
           Заказать стол
         </Typography>
       </Button>

@@ -90,7 +90,7 @@ const MainLayout = () => {
       </Box>
       {matchDownLG && <Drawer open={open} handleDrawerToggle={handleDrawerToggle} />}
       <Header open={open} handleDrawerToggle={handleDrawerToggle} />
-      <Box height="calc(100vh - 90px)" mt="90px" display="flex" flexDirection="column">
+      <Box height="calc(100vh - 80px)" mt="90px" display="flex" flexDirection="column">
         <Intro />
       </Box>
       <Box component="main" sx={{ width: '100%', flexGrow: 1, flex: 1 }}>
