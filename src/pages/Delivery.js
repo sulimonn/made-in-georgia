@@ -83,7 +83,7 @@ const Delivery = () => {
         Доставка
       </Typography>
       <Grid container sx={{ mt: 6 }}>
-        <Grid item xs={12} sm={4}>
+        <Grid item xs={12} sm={5}>
           <Box sx={{ width: { xs: '85%', sm: '100%' }, m: '0 auto' }}>
             <Typography variant="h3" textAlign={{ xs: 'left', sm: 'center' }} fontWeight="500">
               СПОСОБЫ ЗАКАЗА
@@ -135,16 +135,6 @@ const Delivery = () => {
                 </Typography>
               </Box>
             </Box>
-
-            <Typography
-              variant="h3"
-              color=""
-              textAlign={{ xs: 'left', sm: 'center' }}
-              fontWeight="500"
-              sx={{ pt: 3 }}
-            >
-              СПОСОБЫ ЗАКАЗА
-            </Typography>
             <Box display="flex" alignItems="center" gap={{ xs: 3.5, sm: 5 }} py={3}>
               <img
                 src={DeliveryPic}
@@ -160,11 +150,17 @@ const Delivery = () => {
                   fontWeight="400"
                   textTransform="capitalize"
                   color="text.error"
+                  fontSize={{ xs: '1.2em', sm: '1.2em' }}
                   sx={{ pt: 0.5 }}
                 >
                   москва сити - бесплатно
                 </Typography>
-                <Typography variant="h5" fontWeight="400" sx={{ pt: 0.5 }}>
+                <Typography
+                  variant="h5"
+                  fontWeight="400"
+                  sx={{ pt: 0.5 }}
+                  fontSize={{ xs: '1.2em', sm: '1.2em' }}
+                >
                   Время приема заказов с 11:00-22:00
                 </Typography>
                 <Typography
@@ -209,7 +205,7 @@ const Delivery = () => {
             </Box>
           </Box>
         </Grid>
-        <Grid item xs={12} sm={8}>
+        <Grid item xs={12} sm={7}>
           <Typography
             variant="h3"
             color=""
@@ -223,9 +219,8 @@ const Delivery = () => {
           <Box
             sx={{
               overflow: 'hidden',
-              width: { xs: '100%', sm: '90%' },
+              width: { xs: '100%', sm: '100%' },
               height: { xs: '350px', sm: '670px' },
-              mx: 'auto',
               textAlign: 'center',
             }}
             id="map"

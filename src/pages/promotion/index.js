@@ -13,7 +13,12 @@ const Promotion = () => {
     <Box id="promotions" px={{ xs: 0, sm: 2 }} my={1}>
       <Typography
         variant={matchDownMD ? 'h2' : 'h1'}
-        sx={{ textAlign: { xs: 'center', sm: 'left' } }}
+        sx={{
+          textAlign: { xs: 'center', sm: 'left' },
+          width: '100%',
+          mx: 'auto',
+          maxWidth: '976px',
+        }}
       >
         Акции
       </Typography>

@@ -84,7 +84,7 @@ const Footer = () => {
             <Box sx={{ display: { xs: 'block', md: 'none' } }}>{FooterContent(matchDownMD)}</Box>
           </Grid>
           <Grid item xs={12} md={6}>
-            <Box width={{ xs: '120px', md: '162px' }} mx="auto">
+            <Box width={{ xs: '140px', md: '192px' }} mx="auto">
               <ScrollLink to="header" activeClass="active" spy smooth duration={500}>
                 <Logo />
               </ScrollLink>

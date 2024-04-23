@@ -18,16 +18,17 @@ const HeaderContent = () => {
 
   return (
     <Box
-      sx={{ width: '100%' }}
+      sx={{ width: { xs: '100%', md: '100%' }, mx: 'auto' }}
       display="flex"
+      maxWidth="976px"
       justifyContent="space-between"
       alignItems="baseline"
-      gap={{ md: 8, lg: 22 }}
+      gap={{ md: 3, lg: 3 }}
       py={{ xs: 1.5, sm: 3 }}
       minHeight={{ xs: '84px', lg: 'auto' }}
     >
       {!matchesMd && (
-        <Box display="flex" flex={1} alignItems="center" gap={{ md: 5, lg: 8 }}>
+        <Box display="flex" flex={1} alignItems="center" justifyContent="space-between">
           {navs.map((group) =>
             group.children.map((item) => {
               return (
@@ -36,7 +37,9 @@ const HeaderContent = () => {
                   to={item?.target ? item.url : item.url.replace('#', '')}
                   key={item.id}
                   variant="h3"
+                  fontSize={{ md: '1.7em', lg: '1.9em' }}
                   target={item?.target}
+                  whiteSpace="nowrap"
                   component={item?.target ? LinkRouter : Link}
                   fontWeight="400"
                   color={openItem.includes(item.id) ? 'text.primary' : 'text.secondary'}
@@ -74,15 +77,23 @@ const HeaderContent = () => {
         size="large"
         target="_blank"
         component="a"
+        color="error"
         href="https://wa.me/+79161366868"
         sx={{
           display: { xs: 'none', md: 'block' },
-          borderRadius: 3,
-          backgroundColor: 'transparent !important',
-          p: 0,
+          borderRadius: 1.7,
+          px: 2,
+          py: 1,
         }}
       >
-        <Typography variant={'h3'} fontWeight="400" textTransform="none" color="text.error">
+        <Typography
+          variant={'h3'}
+          fontWeight="400"
+          textTransform="none"
+          color="text.primary"
+          fontSize={{ md: '1.7em', lg: '1.9em' }}
+          whiteSpace="nowrap"
+        >
           Заказать стол
         </Typography>
       </Button>
