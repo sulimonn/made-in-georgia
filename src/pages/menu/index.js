@@ -149,6 +149,7 @@ const Menu = () => {
         <Typography
           variant={isSmallScreen ? 'h3' : 'h1'}
           textTransform="uppercase"
+          whiteSpace="nowrap"
           fontWeight="500"
           component={Tab}
           value={1}
