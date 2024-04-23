@@ -152,6 +152,7 @@ const Menu = () => {
           whiteSpace="nowrap"
           fontWeight="500"
           component={Tab}
+          maxWidth="unset"
           value={1}
           label="Напитки/барная карта"
         />
