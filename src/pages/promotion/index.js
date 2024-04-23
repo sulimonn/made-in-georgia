@@ -17,7 +17,7 @@ const Promotion = () => {
           textAlign: { xs: 'center', sm: 'left' },
           width: '100%',
           mx: 'auto',
-          maxWidth: '976px',
+          maxWidth: '1200px',
         }}
       >
         Акции

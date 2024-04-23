@@ -20,10 +20,10 @@ const HeaderContent = () => {
     <Box
       sx={{ width: { xs: '100%', md: '100%' }, mx: 'auto' }}
       display="flex"
-      maxWidth="976px"
+      maxWidth="1200px"
       justifyContent="space-between"
       alignItems="baseline"
-      gap={{ md: 3, lg: 3 }}
+      gap={{ md: 5, lg: 10 }}
       py={{ xs: 1.5, sm: 3 }}
       minHeight={{ xs: '84px', lg: 'auto' }}
     >
