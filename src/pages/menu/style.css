@@ -17,6 +17,11 @@ a {
   position: relative;
   margin-right: 0.5em;
 }
+.MuiTabs-scroller {
+  padding-left: 0;
+  padding-right: 0;
+  overflow: visible !important;
+}
 @media screen and (max-width: 768px) {
   .toggle-icon {
     margin-right: 1.3em;
@@ -41,4 +46,13 @@ a {
 
 .open.toggle-icon::before {
   transform: rotate(0deg);
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
 }

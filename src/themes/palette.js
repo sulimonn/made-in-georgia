@@ -33,7 +33,7 @@ const Palette = (mode) => {
   const paletteColor = ThemeOption(colors);
   paletteColor.error = {
     ...paletteColor.error,
-    main: '#ED0000',
+    main: '#ec0100',
   };
 
   return createTheme({
@@ -48,7 +48,7 @@ const Palette = (mode) => {
         primary: paletteColor.grey[0],
         secondary: paletteColor.grey[400],
         info: '#198EB6',
-        error: '#ED0000',
+        error: '#ec0100',
         success: '#78BE4E',
         disabled: '#585858',
       },

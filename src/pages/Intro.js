@@ -1,7 +1,7 @@
 import React from 'react';
-
+import Marquee from 'react-double-marquee';
 import IntroPic from 'assets/images/intro.png';
-import { Box, Typography, Button, useMediaQuery } from '@mui/material';
+import { Box, Typography, useMediaQuery } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
 import Logo from 'components/Logo/Logo';
 
@@ -23,7 +23,7 @@ const Intro = () => {
       <img
         src={IntroPic}
         alt="intro"
-        loading="lazy"
+        loading="eager|lazy"
         style={{
           opacity: 0.4,
           width: isSM ? '100%' : '120%',
@@ -41,7 +41,7 @@ const Intro = () => {
           zIndex: 1,
           pl: 2,
           pb: 20,
-          width: { sm: 300, lg: 400 },
+          width: { xs: 200, sm: 300, lg: 400 },
           height: 'min-content',
         }}
       >
@@ -59,26 +59,27 @@ const Intro = () => {
       <Box
         sx={{
           position: 'absolute',
-          bottom: '10%',
+          bottom: '1%',
           width: '100%',
-          display: 'flex',
-          justifyContent: 'center',
-          alignItems: 'center',
+          overflow: 'hidden',
+          whiteSpace: 'nowrap',
         }}
       >
-        <Button
-          variant="contained"
-          size="large"
-          color="error"
-          target="_blank"
-          component="a"
-          href="https://wa.me/+79161366868"
-          sx={{ display: { xs: 'none', lg: 'block' }, pb: 1, pt: 0.5, px: 4, borderRadius: 3 }}
-        >
-          <Typography variant={'h2'} fontWeight="400" textTransform="none">
-            Заказать стол
+        <Marquee>
+          <Typography
+            sx={{
+              px: { xs: 3, sm: 0 },
+              whiteSpace: 'nowrap', // Ensure the text does not wrap
+              display: 'inline-block', // Ensure text remains inline
+            }}
+            fontSize={{ xs: '1.25rem', md: 'calc(100vw * 0.03)' }}
+            color="error"
+            textAlign="center"
+            textTransform="uppercase"
+          >
+            «made in georgia» блюда с исконно - грузинским акцентом по старинным рецептам.
           </Typography>
-        </Button>
+        </Marquee>
       </Box>
     </Box>
   );

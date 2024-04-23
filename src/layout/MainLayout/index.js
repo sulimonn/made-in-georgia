@@ -73,7 +73,7 @@ const MainLayout = () => {
             lg: 'none',
           },
           width: 'min-content',
-          position: open ? 'fixed' : 'absolute',
+          position: open ? 'fixed' : 'fixed',
           zIndex: 1201,
           right: '2em',
           top: '2em',
@@ -85,11 +85,12 @@ const MainLayout = () => {
           color={open ? iconBackColorOpen : iconBackColor}
           hideOutline={false}
           rounded
+          style={{ zIndex: 1201, position: 'fixed' }}
         />
       </Box>
       {matchDownLG && <Drawer open={open} handleDrawerToggle={handleDrawerToggle} />}
-      <Box height="100vh" display="flex" flexDirection="column">
-        <Header open={open} handleDrawerToggle={handleDrawerToggle} />
+      <Header open={open} handleDrawerToggle={handleDrawerToggle} />
+      <Box height="calc(100vh - 90px)" mt="90px" display="flex" flexDirection="column">
         <Intro />
       </Box>
       <Box component="main" sx={{ width: '100%', flexGrow: 1, flex: 1 }}>

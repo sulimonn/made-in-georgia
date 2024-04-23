@@ -127,37 +127,47 @@ const Menu = () => {
     </MUIAccordion>
   );
   return (
-    <Box width={{ xs: '100%', sm: '85%' }} pt={2} pb={6} mx="auto" id="menu">
+    <Box width={{ xs: '100%', sm: '80%', md: '60%' }} pt={2} pb={6} mx="auto" id="menu">
       <Tabs
         value={value}
         onChange={handleTabChange}
-        sx={{ ml: { xs: 1, sm: 0 } }}
+        sx={{
+          ml: { xs: 1, sm: 0 },
+          overflow: 'visible',
+          '&MuiTabs-scroller': {
+            overflow: 'visible !important',
+          },
+        }}
         textColor="inherit"
         indicatorColor="none"
       >
         <Typography
-          variant={isSmallScreen ? 'h4' : 'h1'}
-          fontSize={isSmallScreen ? '1.25rem' : '3rem'}
+          fontSize={{ xs: '1.5em', sm: '3em' }}
           textTransform="uppercase"
           fontWeight="500"
           component={Tab}
           value={0}
           label="Меню"
+          sx={{ px: 0 }}
         />
         <Divider
-          sx={{ borderWidth: { xs: 2, sm: 4 }, my: { xs: 2, sm: 2.5 }, mx: { xs: 0, sm: 2 } }}
+          sx={{
+            borderWidth: { xs: 2, sm: 4 },
+            my: { xs: 2, sm: 2.5 },
+            mx: { xs: 0, sm: 1, md: 3 },
+          }}
           orientation="vertical"
           variant="middle"
           flexItem
         />
         <Typography
-          variant={isSmallScreen ? 'h4' : 'h1'}
-          fontSize={isSmallScreen ? '1.5em' : '3em'}
+          fontSize={{ xs: '1.5em', sm: '3em' }}
           textTransform="uppercase"
           whiteSpace="nowrap"
           fontWeight="500"
           component={Tab}
           maxWidth="unset"
+          sx={{ overflow: 'visible', px: { xs: 2, sm: 0 } }}
           value={1}
           label="Напитки/барная карта"
         />

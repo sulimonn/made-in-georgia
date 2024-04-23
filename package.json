@@ -26,6 +26,7 @@
     "react-copy-to-clipboard": "^5.1.0",
     "react-device-detect": "^2.2.3",
     "react-dom": "^18.2.0",
+    "react-double-marquee": "^1.1.0",
     "react-draggable": "^4.4.6",
     "react-element-to-jsx-string": "^15.0.0",
     "react-number-format": "^5.3.1",

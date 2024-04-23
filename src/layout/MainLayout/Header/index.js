@@ -23,10 +23,11 @@ const Header = ({ open, handleDrawerToggle }) => {
 
   // app-bar params
   const appBar = {
-    position: 'static',
+    position: 'fixed',
     width: '100%',
     color: 'inherit',
     elevation: 0,
+    minHeight: '90px',
   };
 
   return (

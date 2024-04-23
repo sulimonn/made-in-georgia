@@ -1,5 +1,5 @@
 // material-ui
-import { Box, useMediaQuery, Typography } from '@mui/material';
+import { Box, useMediaQuery, Typography, Button } from '@mui/material';
 
 // project import
 import { Link } from 'react-scroll';
@@ -24,18 +24,8 @@ const HeaderContent = () => {
       alignItems="baseline"
       gap={14}
       py={3}
+      minHeight={{ xs: '90px', lg: 'auto' }}
     >
-      <Typography
-        component={LinkRouter}
-        to="/"
-        color="error"
-        variant={matchesMd ? 'h3' : 'h2'}
-        textTransform="uppercase"
-        minWidth={330}
-        fontWeight="400"
-      >
-        made{'  '}in{'  '}georgia
-      </Typography>
       {!matchesMd && (
         <Box display="flex" flex={1} alignItems="center" justifyContent="space-between">
           {navs.map((group) =>
@@ -77,7 +67,24 @@ const HeaderContent = () => {
             }),
           )}
         </Box>
-      )}{' '}
+      )}
+
+      <Button
+        variant="contained"
+        size="large"
+        target="_blank"
+        component="a"
+        href="https://wa.me/+79161366868"
+        sx={{
+          display: { xs: 'none', lg: 'block' },
+          borderRadius: 3,
+          backgroundColor: 'transparent !important',
+        }}
+      >
+        <Typography variant={'h3'} fontWeight="400" textTransform="none">
+          Заказать стол
+        </Typography>
+      </Button>
     </Box>
   );
 };

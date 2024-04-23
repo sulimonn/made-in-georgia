@@ -15,12 +15,12 @@ const Promotion = () => {
         variant={matchDownMD ? 'h2' : 'h1'}
         sx={{ textAlign: { xs: 'center', sm: 'left' } }}
       >
-        Акционные предложения
+        Акции
       </Typography>
       <Grid container spacing={{ xs: 2, sm: 10 }} pt={6}>
         {images.map((image, index) => (
           <Grid item xs={12} sm={6} key={index} sx={{ overflow: 'hidden' }}>
-            <img loading="lazy" src={image} alt="imag" style={{ width: '100%' }} />
+            <img loading="eager|lazy" src={image} alt="imag" style={{ width: '100%' }} />
           </Grid>
         ))}
       </Grid>

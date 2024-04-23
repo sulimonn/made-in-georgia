@@ -21,7 +21,7 @@ const Loyalty = () => {
           src={LoyaltyPic}
           alt="loyalty"
           style={{ width: '100%', objectFit: 'contain' }}
-          loading="lazy"
+          loading="eager|lazy"
         />
       </Box>
       <Button
@@ -35,11 +35,11 @@ const Loyalty = () => {
           width: 'fit-content',
           fontSize: { xs: '1.25rem', sm: '2rem' },
           textTransform: 'capitalize',
-          py: { xs: 0.5, sm: 1 },
+          py: { xs: 0.5, sm: 0.75 },
         }}
         size="large"
       >
-        Присоединиться
+        стать участником
       </Button>
     </Box>
   );
