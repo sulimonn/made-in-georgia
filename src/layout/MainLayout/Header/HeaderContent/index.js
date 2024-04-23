@@ -27,7 +27,7 @@ const HeaderContent = () => {
       minHeight={{ xs: '84px', lg: 'auto' }}
     >
       {!matchesMd && (
-        <Box display="flex" flex={1} alignItems="center" justifyContent="space-between">
+        <Box display="flex" flex={1} alignItems="center" gap={{ md: 5, lg: 8 }}>
           {navs.map((group) =>
             group.children.map((item) => {
               return (
