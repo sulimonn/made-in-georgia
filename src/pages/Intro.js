@@ -59,11 +59,11 @@ const Intro = () => {
       <Box
         sx={{
           position: 'absolute',
-          bottom: '0%',
+          bottom: '1%',
           width: '100%',
           overflow: 'hidden',
           whiteSpace: 'nowrap',
-          backgroundColor: '',
+          backgroundColor: '#00000060',
         }}
       >
         <Marquee direction="left">
