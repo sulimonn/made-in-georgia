@@ -152,7 +152,7 @@ const Menu = () => {
           fontWeight="500"
           component={Tab}
           value={1}
-          label="ВИННАЯ КАРТА"
+          label="Напитки/барная карта"
         />
       </Tabs>
 
