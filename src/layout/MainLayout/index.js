@@ -21,7 +21,7 @@ import Intro from 'pages/Intro';
 
 const MainLayout = () => {
   const theme = useTheme();
-  const matchDownLG = useMediaQuery(theme.breakpoints.down('lg'));
+  const matchDownLG = useMediaQuery(theme.breakpoints.down('md'));
   const dispatch = useDispatch();
 
   const [loading, setLoading] = useState(true);

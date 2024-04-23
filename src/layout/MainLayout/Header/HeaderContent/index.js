@@ -10,7 +10,7 @@ import { useSelector } from 'react-redux';
 // ==============================|| HEADER - CONTENT ||============================== //
 
 const HeaderContent = () => {
-  const matchesMd = useMediaQuery((theme) => theme.breakpoints.down('lg'));
+  const matchesMd = useMediaQuery((theme) => theme.breakpoints.down('md'));
 
   const navs = menuItems.items;
   const openItem = useSelector((state) => state.nav.openItem);
@@ -22,7 +22,7 @@ const HeaderContent = () => {
       display="flex"
       justifyContent="space-between"
       alignItems="baseline"
-      gap={14}
+      gap={{ md: 8, lg: 22 }}
       py={{ xs: 1.5, sm: 3 }}
       minHeight={{ xs: '84px', lg: 'auto' }}
     >
@@ -76,7 +76,7 @@ const HeaderContent = () => {
         component="a"
         href="https://wa.me/+79161366868"
         sx={{
-          display: { xs: 'none', lg: 'block' },
+          display: { xs: 'none', md: 'block' },
           borderRadius: 3,
           backgroundColor: 'transparent !important',
           p: 0,

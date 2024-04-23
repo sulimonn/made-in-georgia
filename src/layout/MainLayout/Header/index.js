@@ -12,7 +12,7 @@ import HeaderContent from './HeaderContent';
 
 const Header = ({ open, handleDrawerToggle }) => {
   const theme = useTheme();
-  const matchDownMD = useMediaQuery(theme.breakpoints.down('lg'));
+  const matchDownMD = useMediaQuery(theme.breakpoints.down('md'));
 
   // common header
   const mainHeader = (
