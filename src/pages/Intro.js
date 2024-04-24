@@ -1,6 +1,6 @@
 import React from 'react';
 import Marquee from 'react-double-marquee';
-import IntroPic from 'assets/images/intro.png';
+import IntroPic from 'assets/images/intro.jpg';
 import { Box, Typography, useMediaQuery } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
 import Logo from 'components/Logo/Logo';
@@ -18,6 +18,7 @@ const Intro = () => {
         alignItems: 'center',
         position: 'relative',
         overflow: 'hidden',
+        height: '100vh',
       }}
     >
       <img
@@ -29,7 +30,7 @@ const Intro = () => {
           width: isSM ? '100%' : '120%',
           height: isSM ? '100%' : '120%',
           objectFit: 'cover',
-          objectPosition: 'left bottom',
+          objectPosition: 'left',
           position: 'absolute',
           bottom: 0,
           left: 0,
@@ -59,11 +60,12 @@ const Intro = () => {
       <Box
         sx={{
           position: 'absolute',
-          bottom: '1%',
+          bottom: '0%',
           width: '100%',
           overflow: 'hidden',
           whiteSpace: 'nowrap',
           backgroundColor: '#00000060',
+          display: { xs: 'none', sm: 'block' },
         }}
       >
         <Marquee direction="left">

@@ -5,13 +5,15 @@ import Loyalty from './Loyalty';
 // mui
 import { Box } from '@mui/material';
 
-import Panoram from 'assets/images/панорама.png';
+import Panoram from 'assets/images/панорама.jpg';
 import Menu from './menu';
 import Delivery from './Delivery';
+import Intro from './Intro';
 
 const Pages = () => {
   return (
     <>
+      <Intro />
       <Promotion />
       <Loyalty />
       {/* <Typography

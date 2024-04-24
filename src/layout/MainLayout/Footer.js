@@ -4,7 +4,7 @@ import { Link as ScrollLink } from 'react-scroll';
 
 // material-ui
 import { Box, Grid, Typography, useMediaQuery } from '@mui/material';
-import Logo from 'components/Logo/Logo';
+import Logo from 'assets/images/new-logo.png';
 import { useTheme } from '@mui/material/styles';
 import { WhatsAppOutlined, InstagramOutlined } from '@ant-design/icons';
 
@@ -84,9 +84,9 @@ const Footer = () => {
             <Box sx={{ display: { xs: 'block', md: 'none' } }}>{FooterContent(matchDownMD)}</Box>
           </Grid>
           <Grid item xs={12} md={6}>
-            <Box width={{ xs: '140px', md: '192px' }} mx="auto">
+            <Box width={{ xs: '160px', md: '252px' }} mx="auto">
               <ScrollLink to="header" activeClass="active" spy smooth duration={500}>
-                <Logo />
+                <img src={Logo} alt="logo" loading="lazy" style={{ width: '100%' }} />
               </ScrollLink>
             </Box>
           </Grid>

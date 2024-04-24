@@ -1,6 +1,6 @@
 import React from 'react';
-import Promo1 from 'assets/images/promotions/promo1.png';
-import Promo2 from 'assets/images/promotions/promo2.png';
+import Promo1 from 'assets/images/promotions/promo1.jpg';
+import Promo2 from 'assets/images/promotions/promo2.jpg';
 
 import { Box, Typography, Grid, useMediaQuery } from '@mui/material';
 import { useTheme } from '@mui/material/styles';

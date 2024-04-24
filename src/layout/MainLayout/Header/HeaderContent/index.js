@@ -25,7 +25,7 @@ const HeaderContent = () => {
       alignItems="baseline"
       gap={{ md: 5, lg: 10 }}
       py={{ xs: 1.5, sm: 3 }}
-      minHeight={{ xs: '84px', lg: 'auto' }}
+      minHeight={{ xs: '60px', lg: 'auto' }}
     >
       {!matchesMd && (
         <Box display="flex" flex={1} alignItems="center" justifyContent="space-between">

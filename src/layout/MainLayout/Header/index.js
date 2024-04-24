@@ -27,7 +27,6 @@ const Header = ({ open, handleDrawerToggle }) => {
     width: '100%',
     color: 'inherit',
     elevation: 0,
-    minHeight: '90px',
   };
 
   return (

@@ -15,7 +15,6 @@ import Header from './Header';
 import { openDrawer } from 'store/reducers/nav';
 import Footer from './Footer';
 import Loader from 'components/Loader';
-import Intro from 'pages/Intro';
 
 // ==============================|| MAIN LAYOUT ||============================== //
 
@@ -76,7 +75,7 @@ const MainLayout = () => {
           position: open ? 'fixed' : 'fixed',
           zIndex: 1201,
           right: '2em',
-          top: '2em',
+          top: '1.3em',
         }}
       >
         <Hamburger
@@ -90,14 +89,6 @@ const MainLayout = () => {
       </Box>
       {matchDownLG && <Drawer open={open} handleDrawerToggle={handleDrawerToggle} />}
       <Header open={open} handleDrawerToggle={handleDrawerToggle} />
-      <Box
-        height={{ xs: 'calc(100vh - 90px)', md: 'calc(100vh - 110px)' }}
-        mt={{ xs: '90px', md: '110px' }}
-        display="flex"
-        flexDirection="column"
-      >
-        <Intro />
-      </Box>
       <Box component="main" sx={{ width: '100%', flexGrow: 1, flex: 1 }}>
         <Outlet />
       </Box>
