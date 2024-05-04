@@ -43,38 +43,48 @@ const Loyalty = () => {
           pointerEvents: 'none',
         }}
       />
-      <Box display="flex" width="100%">
-        <Box
-          sx={{
-            position: 'relative',
-            zIndex: 1,
-            alignSelf: 'flex-end',
-            pl: 2,
-            width: { sm: 270, lg: 400 },
-            height: 'min-content',
-            display: {
-              xs: 'none',
-              sm: 'block',
-            },
-          }}
+      <Box
+        sx={{
+          position: 'absolute',
+          zIndex: 1,
+          left: 0,
+          top: 180,
+          alignSelf: 'flex-end',
+          pl: 2,
+          width: { sm: 270, lg: 300 },
+          height: 'min-content',
+          display: {
+            xs: 'none',
+            sm: 'block',
+          },
+        }}
+      >
+        <Logo />
+        <Typography
+          variant={isSM ? 'h1' : 'h3'}
+          color="text.primary"
+          textAlign="center"
+          textTransform="uppercase"
+          fontWeight="500"
         >
-          <Logo />
-          <Typography
-            variant={isSM ? 'h1' : 'h3'}
-            color="text.primary"
-            textAlign="center"
-            textTransform="uppercase"
-            fontWeight="500"
-          >
-            РЕСТОРАН
-          </Typography>
-        </Box>
+          РЕСТОРАН
+        </Typography>
+      </Box>
+      <Box
+        sx={{
+          width: { xs: '100%', sm: '75%', md: '55%' },
+          backgroundColor: { xs: 'transparent', sm: '#ffffff21' },
+          zIndex: 1,
+          py: 3,
+          px: 2,
+          borderRadius: 2,
+        }}
+      >
         <Box
           position="relative"
           zIndex={1}
           height="min-content"
           alignSelf="flex-end"
-          width={{ xs: 'calc(100%)', sm: 'calc(90% - 270px)', lg: 'calc(80% - 400px)' }}
           pb={{ xs: 1, sm: 2 }}
         >
           <Typography
@@ -117,63 +127,63 @@ const Loyalty = () => {
             (оплата разово не более 50% от суммы чека)
           </Typography>
         </Box>
-      </Box>
-      <Box position="relative" zIndex={1} width={{ xs: '95%', sm: '50%' }} mx="auto">
-        <Typography
-          variant="h5"
-          color="text.primary"
-          fontWeight="500"
-          fontSize={{ xs: '1rem', sm: '1.3rem', md: '1.4rem' }}
-          sx={{ mb: { xs: 1.2, sm: 2.2 } }}
-        >
-          Уровни участия в программе:
-        </Typography>
-        <Typography
-          variant="h5"
-          color="text.primary"
-          fontWeight="500"
-          fontSize={{ xs: '1rem', sm: '1.3rem', md: '1.4rem' }}
-          lineHeight={1}
-          sx={{ mb: { xs: 1, sm: 2 } }}
-        >
-          «Гость MADE IN GEORGIA» <br />
-          При каждой оплате на карту возвращается{' '}
-          <Typography component="span" color="text.error">
-            {' '}
-            5%{' '}
+        <Box position="relative" zIndex={1} mx="auto">
+          <Typography
+            variant="h5"
+            color="text.primary"
+            fontWeight="500"
+            fontSize={{ xs: '1rem', sm: '1.3rem', md: '1.4rem' }}
+            sx={{ mb: { xs: 1.2, sm: 2.2 } }}
+          >
+            Уровни участия в программе:
           </Typography>
-          от суммы.
-        </Typography>
-        <Typography
-          variant="h5"
-          color="text.primary"
-          fontWeight="500"
-          fontSize={{ xs: '1rem', sm: '1.3rem', md: '1.4rem' }}
-          lineHeight={1}
-          sx={{ mb: { xs: 1, sm: 2 } }}
-        >
-          «Постоянный гость MADE IN GEORGIA»
-          <br />
-          Если общая сумма превышает 100 000 руб. —{' '}
-          <Typography component="span" color="text.error">
-            10%
+          <Typography
+            variant="h5"
+            color="text.primary"
+            fontWeight="500"
+            fontSize={{ xs: '1rem', sm: '1.3rem', md: '1.4rem' }}
+            lineHeight={1}
+            sx={{ mb: { xs: 1, sm: 2 } }}
+          >
+            «Гость MADE IN GEORGIA» <br />
+            При каждой оплате на карту возвращается{' '}
+            <Typography component="span" color="text.error">
+              {' '}
+              5%{' '}
+            </Typography>
+            от суммы.
           </Typography>
-        </Typography>
-        <Typography
-          variant="h5"
-          color="text.primary"
-          fontWeight="500"
-          fontSize={{ xs: '1rem', sm: '1.3rem', md: '1.4rem' }}
-          lineHeight={1}
-          sx={{ mb: { xs: 1, sm: 2 } }}
-        >
-          «Друг MADE IN GEORGIA»
-          <br />
-          Если общая сумма превышает 250 000 руб. —{' '}
-          <Typography component="span" color="text.error">
-            15%
+          <Typography
+            variant="h5"
+            color="text.primary"
+            fontWeight="500"
+            fontSize={{ xs: '1rem', sm: '1.3rem', md: '1.4rem' }}
+            lineHeight={1}
+            sx={{ mb: { xs: 1, sm: 2 } }}
+          >
+            «Постоянный гость MADE IN GEORGIA»
+            <br />
+            Если общая сумма превышает 100 000 руб. —{' '}
+            <Typography component="span" color="text.error">
+              10%
+            </Typography>
           </Typography>
-        </Typography>
+          <Typography
+            variant="h5"
+            color="text.primary"
+            fontWeight="500"
+            fontSize={{ xs: '1rem', sm: '1.3rem', md: '1.4rem' }}
+            lineHeight={1}
+            sx={{ mb: { xs: 1, sm: 2 } }}
+          >
+            «Друг MADE IN GEORGIA»
+            <br />
+            Если общая сумма превышает 250 000 руб. —{' '}
+            <Typography component="span" color="text.error">
+              15%
+            </Typography>
+          </Typography>
+        </Box>
       </Box>
       <Box width="100%" display="flex" justifyContent="center" pt={{ xs: 0, sm: 4 }}>
         <Button
@@ -191,7 +201,7 @@ const Loyalty = () => {
           }}
           size="large"
         >
-          Стать участником Программы
+          Стать участником программы
         </Button>
       </Box>
     </Box>

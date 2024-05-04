@@ -9,6 +9,7 @@ import Contact from 'assets/images/icons/contact.svg';
 import DeliveryPic from 'assets/images/icons/delivery.svg';
 
 import { Box, Typography, Grid } from '@mui/material';
+import './style.css';
 
 const stores = (
   <>
@@ -71,7 +72,6 @@ const Delivery = () => {
     script.async = true;
     script.src =
       'https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A45c51f39158fd212da4e6fa3c5db59bc82d6504f87f92236d2ad702253309e02&width=100%25&height=100%&lang=ru_RU&scroll=true&theme=dark';
-
     const map = document.getElementById('map');
     if (map && !map.hasChildNodes()) {
       map.appendChild(script);

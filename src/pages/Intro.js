@@ -41,7 +41,7 @@ const Intro = () => {
           position: 'relative',
           zIndex: 1,
           pl: 2,
-          pb: 30,
+          pb: 20,
           width: { xs: 200, sm: 300, lg: 400 },
           height: 'min-content',
         }}
