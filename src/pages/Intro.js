@@ -80,7 +80,7 @@ const Intro = () => {
             textAlign="center"
             textTransform="uppercase"
           >
-            блюда с исконно - грузинским акцентом по старинным рецептам.
+            блюда с исконно - грузинским акцентом по старинным рецептам
           </Typography>
         </Marquee>
       </Box>

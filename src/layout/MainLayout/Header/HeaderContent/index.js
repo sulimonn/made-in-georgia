@@ -23,7 +23,7 @@ const HeaderContent = () => {
       maxWidth="1200px"
       justifyContent="space-between"
       alignItems="baseline"
-      gap={{ md: 5, lg: 10 }}
+      gap={{ md: 15, lg: 20 }}
       py={{ xs: 1.5, sm: 3 }}
       minHeight={{ xs: '60px', lg: 'auto' }}
     >
