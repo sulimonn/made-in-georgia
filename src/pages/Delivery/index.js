@@ -66,15 +66,15 @@ const stores = (
 
 const Delivery = () => {
   useEffect(() => {
-    const script = document.createElement('script');
-    script.charset = 'utf-8';
-    script.async = true;
-    script.src =
-      'https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A86994da1ebf4bf24ff72af92d3233c6a173e4cf3b05fd824d7b7c59876709ff6&width=100%25&height=100%&lang=ru_RU&scroll=true&zoom=15&theme=dark';
-    const map = document.getElementById('map');
-    if (map && !map.hasChildNodes()) {
-      map.appendChild(script);
-    }
+    // const script = document.createElement('script');
+    // script.charset = 'utf-8';
+    // script.async = true;
+    // script.src =
+    //   'https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A86994da1ebf4bf24ff72af92d3233c6a173e4cf3b05fd824d7b7c59876709ff6&width=100%25&height=100%&lang=ru_RU&scroll=true&zoom=15&theme=dark';
+    // const map = document.getElementById('map');
+    // if (map && !map.hasChildNodes()) {
+    //   map.appendChild(script);
+    // }
   }, []);
   return (
     <Box id="delivery" width={{ xs: '100%', sm: '85%' }} mx="auto" mb={{ xs: 10, sm: 15 }}>
