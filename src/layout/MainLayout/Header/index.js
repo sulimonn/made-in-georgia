@@ -26,6 +26,7 @@ const Header = ({ open, handleDrawerToggle }) => {
     position: 'fixed',
     width: '100%',
     color: 'inherit',
+    backgroundColor: '#00000050',
     elevation: 0,
   };
 

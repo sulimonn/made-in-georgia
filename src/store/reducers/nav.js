@@ -17,7 +17,7 @@ const nav = createSlice({
   initialState,
   reducers: {
     activeItem(state, action) {
-      state.openItem = action.payload.openItem;
+      state.openItem = [action.payload.openItem];
     },
 
     activeComponent(state, action) {

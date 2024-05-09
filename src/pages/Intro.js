@@ -18,7 +18,8 @@ const Intro = () => {
         alignItems: 'center',
         position: 'relative',
         overflow: 'hidden',
-        height: '100vh',
+        height: { xs: 'calc(100vh - 80px)', md: 'calc(100vh - 120px)' },
+        mt: { xs: '80px', md: '120px' },
       }}
     >
       <img
@@ -41,7 +42,7 @@ const Intro = () => {
           position: 'relative',
           zIndex: 1,
           pl: 2,
-          pb: 20,
+          pb: 30,
           width: { xs: 200, sm: 300, lg: 400 },
           height: 'min-content',
         }}
@@ -53,6 +54,7 @@ const Intro = () => {
           textAlign="center"
           textTransform="uppercase"
           fontWeight="500"
+          sx={{ display: { xs: 'none', sm: 'block' } }}
         >
           РЕСТОРАН
         </Typography>

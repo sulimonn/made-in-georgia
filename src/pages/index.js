@@ -7,7 +7,7 @@ import { Box } from '@mui/material';
 
 import Panoram from 'assets/images/панорама.jpg';
 import Menu from './menu';
-import Delivery from './Delivery';
+import Delivery from './Delivery/index';
 import Intro from './Intro';
 
 const Pages = () => {
@@ -30,7 +30,7 @@ const Pages = () => {
         <img
           src={Panoram}
           alt="panoram"
-          style={{ width: '100%', objectFit: 'contain' }}
+          style={{ width: '100%', objectFit: 'contain', opacity: 0.7 }}
           loading="lazy"
         />
       </Box>

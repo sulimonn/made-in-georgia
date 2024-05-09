@@ -9,7 +9,7 @@ const pages = {
       id: 'home',
       title: 'Главная',
       type: 'item',
-      url: '/',
+      url: '#home',
     },
     {
       id: 'promotions',

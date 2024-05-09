@@ -67,11 +67,10 @@ const stores = (
 const Delivery = () => {
   useEffect(() => {
     const script = document.createElement('script');
-    script.type = 'text/javascript';
     script.charset = 'utf-8';
     script.async = true;
     script.src =
-      'https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A45c51f39158fd212da4e6fa3c5db59bc82d6504f87f92236d2ad702253309e02&width=100%25&height=100%&lang=ru_RU&scroll=true&theme=dark';
+      'https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A86994da1ebf4bf24ff72af92d3233c6a173e4cf3b05fd824d7b7c59876709ff6&width=100%25&height=100%&lang=ru_RU&scroll=true&zoom=15&theme=dark';
     const map = document.getElementById('map');
     if (map && !map.hasChildNodes()) {
       map.appendChild(script);
@@ -122,13 +121,15 @@ const Delivery = () => {
                 <Typography variant="h4" sx={{ pb: 2 }} color="text.primary">
                   ПО ТЕЛЕФОНУ
                 </Typography>{' '}
-                <Typography variant="h5" fontWeight="400" textDecoration="none" target="_blank">
+                <Typography variant="h5" fontWeight="400">
                   Позвоните по номеру{' '}
                   <Typography
+                    variant="h5"
+                    fontWeight="400"
                     component={Link}
                     to="tel:+7 (495) 663-68-68"
                     sx={{ textDecoration: 'none', display: { xs: 'block', sm: 'inline' } }}
-                    color="text.success"
+                    color="text.error"
                   >
                     8 (495) 663-68-68
                   </Typography>

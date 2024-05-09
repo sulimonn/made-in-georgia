@@ -5,16 +5,25 @@ import { Box, useMediaQuery, Typography, Button } from '@mui/material';
 import { Link } from 'react-scroll';
 import { Link as LinkRouter } from 'react-router-dom';
 import menuItems from 'menu-items/index';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
+import { activeItem } from 'store/reducers/nav';
 
 // ==============================|| HEADER - CONTENT ||============================== //
 
 const HeaderContent = () => {
+  const dispatch = useDispatch();
   const matchesMd = useMediaQuery((theme) => theme.breakpoints.down('md'));
 
   const navs = menuItems.items;
   const openItem = useSelector((state) => state.nav.openItem);
-  const linkProps = { activeClass: 'active', spy: true, smooth: true, duration: 500 };
+  const linkProps = { activeClass: 'active', spy: true, smooth: true, duration: 500, offset: -110 };
+
+  const setOpenItem = (id) => {
+    console.log(id);
+    if (openItem !== id) {
+      dispatch(activeItem({ openItem: id }));
+    }
+  };
 
   return (
     <Box
@@ -36,6 +45,7 @@ const HeaderContent = () => {
                   {...(item?.target ? null : linkProps)}
                   to={item?.target ? item.url : item.url.replace('#', '')}
                   key={item.id}
+                  onClick={() => setOpenItem(item.id)}
                   variant="h3"
                   fontSize={{ md: '1.7em', lg: '1.9em' }}
                   target={item?.target}

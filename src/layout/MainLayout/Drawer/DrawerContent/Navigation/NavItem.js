@@ -29,7 +29,7 @@ const NavItem = ({ item, level }) => {
     spy: true,
     smooth: true,
     duration: 500,
-    offset: item.id === 'contacts' ? -610 : 0,
+    offset: item.id === 'contacts' ? -610 : -90,
   };
   return (
     (drawerOpen || (!drawerOpen && level !== 1)) && (
