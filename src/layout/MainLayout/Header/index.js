@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 
 // material-ui
 import { useTheme } from '@mui/material/styles';
-import { AppBar, Toolbar, useMediaQuery } from '@mui/material';
+import { Toolbar, useMediaQuery } from '@mui/material';
 
 // project import
 import AppBarStyled from './AppBarStyled';
@@ -37,7 +37,9 @@ const Header = ({ open, handleDrawerToggle }) => {
           {mainHeader}
         </AppBarStyled>
       ) : (
-        <AppBar {...appBar}>{mainHeader}</AppBar>
+        <AppBarStyled {...appBar} backgroundColor="transparent">
+          {mainHeader}
+        </AppBarStyled>
       )}
     </>
   );

@@ -73,7 +73,7 @@ const MainLayout = () => {
           },
           width: 'min-content',
           position: open ? 'fixed' : 'fixed',
-          zIndex: 1201,
+          zIndex: 1209,
           right: '2em',
           top: '1.3em',
         }}
