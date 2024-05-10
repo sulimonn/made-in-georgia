@@ -16,11 +16,14 @@ export default function Button(theme) {
       styleOverrides: {
         root: {
           fontWeight: 400,
+          borderRadius: 7,
         },
         contained: {
+          borderRadius: 7,
           ...disabledStyle,
         },
         outlined: {
+          borderRadius: 7,
           ...disabledStyle,
         },
       },

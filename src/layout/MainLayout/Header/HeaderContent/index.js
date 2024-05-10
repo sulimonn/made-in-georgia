@@ -91,7 +91,7 @@ const HeaderContent = () => {
         href="https://wa.me/+79161366868"
         sx={{
           display: { xs: 'none', md: 'block' },
-          borderRadius: 1.7,
+
           px: 2,
           py: 1,
         }}

@@ -77,7 +77,7 @@ const Loyalty = () => {
           zIndex: 1,
           py: 3,
           px: 2,
-          borderRadius: 2,
+          borderRadius: 1.7,
         }}
       >
         <Box
@@ -193,7 +193,6 @@ const Loyalty = () => {
           target="_blank"
           color="error"
           sx={{
-            borderRadius: 3,
             width: 'fit-content',
             fontSize: { xs: '1rem', sm: '2rem' },
             textTransform: 'none',
