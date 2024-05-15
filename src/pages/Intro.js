@@ -48,16 +48,6 @@ const Intro = () => {
         }}
       >
         <Logo />
-        <Typography
-          variant="h1"
-          color="text.primary"
-          textAlign="center"
-          textTransform="uppercase"
-          fontWeight="500"
-          sx={{ display: { xs: 'none', sm: 'block' } }}
-        >
-          РЕСТОРАН
-        </Typography>
       </Box>
       <Box
         sx={{

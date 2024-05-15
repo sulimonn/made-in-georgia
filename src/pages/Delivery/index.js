@@ -200,7 +200,7 @@ const Delivery = () => {
                   График работы: с 11:00 до 22:00
                 </Typography>
                 <Typography variant="h5" fontWeight="400" sx={{ pt: 0.5 }}>
-                  Адрес: 1-й красногвардейский пр.,д.19, 2 этаж
+                  Адрес: 1-й Красногвардейский пр-д,19, 2 этаж
                 </Typography>
               </Box>
             </Box>

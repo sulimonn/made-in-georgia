@@ -6726,7 +6726,7 @@ async function initMap() {
         },
         style: {
           stroke: [{ color: '#13feff', width: 4 }],
-          fill: '#13feff',
+          fill: 'transparent',
           opacity: 0.2,
         },
       }),

@@ -60,15 +60,6 @@ const Loyalty = () => {
         }}
       >
         <Logo />
-        <Typography
-          variant={isSM ? 'h1' : 'h3'}
-          color="text.primary"
-          textAlign="center"
-          textTransform="uppercase"
-          fontWeight="500"
-        >
-          РЕСТОРАН
-        </Typography>
       </Box>
       <Box
         sx={{
