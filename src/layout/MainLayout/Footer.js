@@ -24,11 +24,11 @@ const FooterContent = (matchDownMD) => {
       <Typography variant={matchDownMD ? 'h6' : 'h5'} sx={{ mb: 1.5 }}>
         ПОЧТА:{' '}
         <Link
-          href="mailto:made.in.georgia.rest.com"
+          href="mailto:madeingeorgia.upr@gmail.com"
           target="_blank"
           style={{ textDecoration: 'none', color: 'inherit', textTransform: 'lowercase' }}
         >
-          Made.in.georgia.rest.com
+          madeingeorgia.upr@gmail.com
         </Link>
       </Typography>
       <Box display="flex" gap={2}>
@@ -76,7 +76,7 @@ const Footer = () => {
         >
           <Grid item xs={12} md={3}>
             <Typography variant={matchDownMD ? 'h6' : 'h5'} sx={{ mb: 1.5 }}>
-              АДРЕС: 1-й красногвардейский пр.,д.19, 2 этаж
+              Адрес: 1-й Красногвардейский пр-д,19, 2 этаж
             </Typography>
             <Typography variant={matchDownMD ? 'h6' : 'h5'} sx={{ mb: 1.5 }}>
               ГРАФИК РАБОТЫ: С 11:00 - 22:00

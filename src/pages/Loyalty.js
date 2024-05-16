@@ -118,7 +118,7 @@ const Loyalty = () => {
             (оплата разово не более 50% от суммы чека)
           </Typography>
         </Box>
-        <Box position="relative" zIndex={1} mx="auto">
+        <Box position="relative" zIndex={1} mx="auto" pt={4}>
           <Typography
             variant="h5"
             color="text.primary"

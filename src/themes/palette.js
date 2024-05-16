@@ -44,6 +44,9 @@ const Palette = (mode) => {
         white: '#fff',
       },
       ...paletteColor,
+      primary: {
+        main: '#ec0100',
+      },
       text: {
         primary: paletteColor.grey[0],
         secondary: paletteColor.grey[400],

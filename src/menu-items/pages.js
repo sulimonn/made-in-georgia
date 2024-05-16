@@ -36,6 +36,13 @@ const pages = {
       url: '#contacts',
     },
     {
+      id: 'feedback',
+      title: 'Обратная связь',
+      type: 'item',
+      url: '#feedback',
+      modal: true,
+    },
+    {
       id: 'loyalty',
       title: 'Программа лояльности',
       type: 'item',

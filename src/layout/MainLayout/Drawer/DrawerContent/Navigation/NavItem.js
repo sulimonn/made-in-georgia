@@ -7,7 +7,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { ListItemText, Typography } from '@mui/material';
 
 // project import
-import { openDrawer } from 'store/reducers/nav';
+import { activeItem, openDrawer } from 'store/reducers/nav';
 
 // ==============================|| NAVIGATION - LIST ITEM ||============================== //
 
@@ -18,9 +18,10 @@ const NavItem = ({ item, level }) => {
 
   const itemHandler = (id) => {
     dispatch(openDrawer({ drawerOpen: false }));
+    dispatch(activeItem({ openItem: id }));
   };
 
-  const isSelected = openItem.findIndex((id) => id === item.id) > -1;
+  const isSelected = openItem === item.id;
 
   const textColor = 'text.primary';
   const iconSelectedColor = 'text.primary';

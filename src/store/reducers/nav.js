@@ -3,7 +3,7 @@ import { createSlice } from '@reduxjs/toolkit';
 
 // initial state
 const initialState = {
-  openItem: ['home'],
+  openItem: 'home',
   defaultId: 'home',
   openComponent: 'buttons',
   drawerOpen: false,
@@ -17,7 +17,7 @@ const nav = createSlice({
   initialState,
   reducers: {
     activeItem(state, action) {
-      state.openItem = [action.payload.openItem];
+      state.openItem = action.payload.openItem;
     },
 
     activeComponent(state, action) {

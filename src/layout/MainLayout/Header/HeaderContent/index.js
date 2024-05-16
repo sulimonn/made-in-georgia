@@ -19,7 +19,6 @@ const HeaderContent = () => {
   const linkProps = { activeClass: 'active', spy: true, smooth: true, duration: 500, offset: -110 };
 
   const setOpenItem = (id) => {
-    console.log(id);
     if (openItem !== id) {
       dispatch(activeItem({ openItem: id }));
     }
@@ -32,7 +31,7 @@ const HeaderContent = () => {
       maxWidth="1200px"
       justifyContent="space-between"
       alignItems="baseline"
-      gap={{ md: 15, lg: 20 }}
+      gap={{ md: 5, lg: 10 }}
       py={{ xs: 1.5, sm: 3 }}
       minHeight={{ xs: '60px', lg: 'auto' }}
     >
@@ -42,8 +41,8 @@ const HeaderContent = () => {
             group.children.map((item) => {
               return (
                 <Typography
-                  {...(item?.target ? null : linkProps)}
-                  to={item?.target ? item.url : item.url.replace('#', '')}
+                  {...(item?.target || item?.modal ? null : linkProps)}
+                  to={item?.modal ? null : item?.target ? item.url : item.url.replace('#', '')}
                   key={item.id}
                   onClick={() => setOpenItem(item.id)}
                   variant="h3"
