@@ -144,6 +144,13 @@ const Register = ({ handleClose }) => {
     );
     return `mailto:madeingeorgia.upr@gmail.com?subject=${subject}&body=${body}`;
   };
+  const formatDate = () => {
+    const date = new Date();
+    const year = date.getFullYear();
+    const month = (date.getMonth() + 1).toString().padStart(2, '0'); // Adding 1 because months are 0-indexed
+    const day = date.getDate().toString().padStart(2, '0');
+    return `${year}-${month}-${day}`;
+  };
   return (
     <Box
       sx={{
@@ -198,10 +205,10 @@ const Register = ({ handleClose }) => {
               label="Дата визита"
               id="date-input"
               placeholder="ДД.ММ.ГГГГ"
-              type="datetime"
+              type="date"
               onChange={handleChange}
               name="date"
-              value={input?.date}
+              value={input?.date || formatDate()}
               errors={errors}
               fullWidth
             />
