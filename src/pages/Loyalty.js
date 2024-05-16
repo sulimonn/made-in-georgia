@@ -1,16 +1,46 @@
 import React from 'react';
+import { useDispatch } from 'react-redux';
 
 import IntroPic from 'assets/images/intro.jpg';
 import { Box, Typography, useMediaQuery, Button } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
 import Logo from 'components/Logo/Logo';
+import { activeItem } from 'store/reducers/nav';
 
 const Loyalty = () => {
   const theme = useTheme();
   const isSM = useMediaQuery(theme.breakpoints.up('sm'), {});
+  const dispatch = useDispatch();
+  const formRef = React.useRef(null);
+
+  React.useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          dispatch(activeItem({ openItem: 'loyalty' }));
+        }
+      },
+      {
+        threshold: 0.5,
+      },
+    );
+
+    const currentFormRef = formRef.current;
+
+    if (currentFormRef) {
+      observer.observe(currentFormRef);
+    }
+
+    return () => {
+      if (currentFormRef) {
+        observer.unobserve(currentFormRef);
+      }
+    };
+  }, [formRef, dispatch]);
   return (
     <Box
-      id="home"
+      id="loyalty"
+      ref={formRef}
       sx={{
         mt: 8,
         mb: 5,

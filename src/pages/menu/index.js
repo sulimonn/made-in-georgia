@@ -1,4 +1,6 @@
 import React from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+
 import './style.css';
 
 import {
@@ -13,7 +15,7 @@ import {
   AccordionDetails,
 } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
-import { useSelector } from 'react-redux';
+import { activeItem } from 'store/reducers/nav';
 
 const Menu = () => {
   const theme = useTheme();
@@ -23,6 +25,34 @@ const Menu = () => {
 
   const [value, setValue] = React.useState(0);
   const [expanded, setExpanded] = React.useState(false);
+
+  const dispatch = useDispatch();
+  const formRef = React.useRef(null);
+
+  React.useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          dispatch(activeItem({ openItem: 'menu' }));
+        }
+      },
+      {
+        threshold: 0.4,
+      },
+    );
+
+    const currentFormRef = formRef.current;
+
+    if (currentFormRef) {
+      observer.observe(currentFormRef);
+    }
+
+    return () => {
+      if (currentFormRef) {
+        observer.unobserve(currentFormRef);
+      }
+    };
+  }, [formRef, dispatch]);
 
   const handleTabChange = (event, newValue) => {
     setValue(newValue);
@@ -127,7 +157,14 @@ const Menu = () => {
     </MUIAccordion>
   );
   return (
-    <Box width={{ xs: '100%', sm: '80%', md: '60%' }} pt={2} pb={6} mx="auto" id="menu">
+    <Box
+      width={{ xs: '100%', sm: '80%', md: '60%' }}
+      pt={2}
+      pb={6}
+      mx="auto"
+      id="menu"
+      ref={formRef}
+    >
       <Tabs
         value={value}
         onChange={handleTabChange}

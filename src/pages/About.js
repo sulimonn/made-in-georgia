@@ -44,8 +44,29 @@ const LoyaltyPrograms = (
 const About = () => {
   const theme = useTheme();
   const matchDownMD = useMediaQuery(theme.breakpoints.down('lg'));
+  const formRef = React.useRef(null);
+  React.useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsVisible(entry.isIntersecting);
+      },
+      {
+        threshold: 0.1, // Adjust this value as needed
+      },
+    );
+
+    if (formRef.current) {
+      observer.observe(formRef.current);
+    }
+
+    return () => {
+      if (formRef.current) {
+        observer.unobserve(formRef.current);
+      }
+    };
+  }, [formRef]);
   return (
-    <Box width={{ xs: '90%', sm: '85%' }} mx="auto" my={5} pb={{ xs: 1, sm: 3 }}>
+    <Box width={{ xs: '90%', sm: '85%' }} mx="auto" my={5} pb={{ xs: 1, sm: 3 }} ref={formRef}>
       <Typography
         variant="h3"
         sx={{ mb: 4, width: { xs: '90%', sm: '100%' }, textAlign: { xs: 'center', sm: 'left' } }}
