@@ -44,7 +44,6 @@ const MainLayout = () => {
   }, [drawerOpen]);
 
   useEffect(() => {
-    console.log(openItem);
     setOpenModal(openItem[0] === 'feedback' || openItem === 'feedback');
   }, [openItem]);
 

@@ -46,8 +46,9 @@ const Register = ({ handleClose }) => {
     phone: '',
     email: '',
     feedback: '',
-    date: '',
+    date: formatDate(),
   });
+  const [success, setSuccess] = React.useState(false);
   const [errors, setErrors] = React.useState('');
 
   const handleChange = (e) => {
@@ -105,7 +106,6 @@ const Register = ({ handleClose }) => {
           return prev;
         });
         isFull = false;
-        console.log(errors[property]);
       }
     }
     e.preventDefault();
@@ -126,8 +126,14 @@ const Register = ({ handleClose }) => {
       });
       return;
     }
+    // eslint-disable-next-line
     const mailtoLink = createMailtoLink(input);
-    window.location.href = mailtoLink;
+    setSuccess(true);
+    setTimeout(() => {
+      setSuccess(false);
+      window.location.href = mailtoLink;
+      handleClose();
+    }, 1500);
   };
   const createMailtoLink = (data) => {
     const { name, phone, email, feedback, date } = data;
@@ -137,170 +143,177 @@ const Register = ({ handleClose }) => {
     );
     return `mailto:madeingeorgia.upr@gmail.com?subject=${subject}&body=${body}`;
   };
-  const formatDate = () => {
+  function formatDate() {
     const date = new Date();
     const year = date.getFullYear();
     const month = (date.getMonth() + 1).toString().padStart(2, '0'); // Adding 1 because months are 0-indexed
     const day = date.getDate().toString().padStart(2, '0');
     return `${year}-${month}-${day}`;
-  };
+  }
   return (
     <Box
       sx={{
         backgroundColor: 'background.paper',
         p: 5,
         borderRadius: 3,
+        overflow: 'hidden',
       }}
       position="relative"
     >
       <Button onClick={handleClose} sx={{ position: 'absolute', top: 10, right: 10, minWidth: 0 }}>
         <CloseOutlined />
       </Button>
-      <Typography
-        component="h1"
-        variant="h1"
-        lineHeight={{ xs: 0.9, sm: 0.8 }}
-        fontSize={{ xs: '1.8rem', sm: '2.7rem' }}
-        sx={{
-          textAlign: 'center',
-          textTransform: 'uppercase',
-          mx: 'auto',
-        }}
-      >
-        оставить отзыв
-      </Typography>
-      <Typography
-        variant="h5"
-        lineHeight={{ xs: 0.9, sm: 0.8 }}
-        sx={{
-          textAlign: 'center',
-          textTransform: 'uppercase',
-          mx: 'auto',
-          pt: 4,
-        }}
-      >
-        Ваше мнение очень важно для нас{' '}
-      </Typography>
-      <form method="post" onSubmit={handleSubmit} style={{ width: '100%' }}>
-        <Box
-          sx={{
-            mt: 4,
-            display: 'flex',
-            justifyContent: 'center',
-            gap: 3,
-            flexDirection: 'column',
-            width: { xs: '300px', sm: '400px', md: '500px' },
-          }}
-          mt={5}
-        >
-          <div style={{ width: '100%' }}>
-            <TextField
-              label="Дата визита"
-              id="date-input"
-              placeholder="ДД.ММ.ГГГГ"
-              type="date"
-              onChange={handleChange}
-              name="date"
-              value={input?.date || formatDate()}
-              errors={errors}
-              fullWidth
-            />
-            {errors?.date && (
-              <FormHelperText sx={{ ml: { xs: 2, sm: 0 } }} error>
-                {errors.date}
-              </FormHelperText>
-            )}
-          </div>
-          <div style={{ width: '100%' }}>
-            <TextField
-              label="Имя"
-              id="component-name"
-              name="name"
-              placeholder="Ваше имя"
-              type="text"
-              onChange={handleChange}
-              value={input?.name}
-              errors={errors}
-              fullWidth
-            />
-            {errors?.name && (
-              <FormHelperText sx={{ ml: { xs: 2, sm: 0 } }} error>
-                {errors.name}
-              </FormHelperText>
-            )}
-          </div>
-          <div style={{ width: '100%' }}>
-            <TextField
-              label="Телефон"
-              id="component-simple"
-              name="phone"
-              placeholder="+7 (___) ___ - __ - __"
-              type="tel"
-              onChange={handleChange}
-              value={input?.phone}
-              errors={errors}
-              fullWidth
-            />
-            {errors?.phone && (
-              <FormHelperText sx={{ ml: { xs: 2, sm: 0 } }} error>
-                {errors.phone}
-              </FormHelperText>
-            )}
-          </div>
-          <div style={{ width: '100%' }}>
-            <TextField
-              label="Email"
-              id="component-email"
-              name="email"
-              placeholder="Ваш email"
-              type="text"
-              onChange={handleChange}
-              value={input?.email}
-              errors={errors}
-              fullWidth
-            />
-            {errors?.email && (
-              <FormHelperText sx={{ ml: { xs: 2, sm: 0 } }} error>
-                {errors.email}
-              </FormHelperText>
-            )}
-          </div>
-          <div style={{ width: '100%' }}>
-            <TextField
-              label="Отзыв"
-              id="component-feedback"
-              name="feedback"
-              placeholder="Оставьте ваше впечатление"
-              type="text"
-              multiline
-              rows={2}
-              onChange={handleChange}
-              value={input?.feedback}
-              errors={errors}
-              fullWidth
-            />
-            {errors?.feedback && (
-              <FormHelperText sx={{ ml: { xs: 2, sm: 0 } }} error>
-                {errors.feedback}
-              </FormHelperText>
-            )}
-          </div>
-          <Button
-            color="error"
-            variant="contained"
-            size="small"
-            type="submit"
+      {success === true ? (
+        <Box>Ваш отзыв успешно отправлен</Box>
+      ) : (
+        <Box sx={{ transition: 'all 0.3s ease', height: success === 'loading' ? '0' : '100%' }}>
+          <Typography
+            component="h1"
+            variant="h1"
+            lineHeight={{ xs: 0.9, sm: 0.8 }}
+            fontSize={{ xs: '1.8rem', sm: '2.7rem' }}
             sx={{
-              my: 4,
-              fontSize: { xs: '1.2rem', sm: '1.25rem' },
-              textTransform: 'none',
-              ml: { xs: 2, sm: 0 },
+              textAlign: 'center',
+              textTransform: 'uppercase',
+              mx: 'auto',
             }}
           >
-            Отправить
-          </Button>
+            оставить отзыв
+          </Typography>
+          <Typography
+            variant="h5"
+            lineHeight={{ xs: 0.9, sm: 0.8 }}
+            sx={{
+              textAlign: 'center',
+              textTransform: 'uppercase',
+              mx: 'auto',
+              pt: 4,
+            }}
+          >
+            Ваше мнение очень важно для нас{' '}
+          </Typography>
+          <form method="post" onSubmit={handleSubmit} style={{ width: '100%' }}>
+            <Box
+              sx={{
+                mt: 4,
+                display: 'flex',
+                justifyContent: 'center',
+                gap: 3,
+                flexDirection: 'column',
+                width: { xs: '300px', sm: '400px', md: '500px' },
+              }}
+              mt={5}
+            >
+              <div style={{ width: '100%' }}>
+                <TextField
+                  label="Дата визита"
+                  id="date-input"
+                  placeholder="ДД.ММ.ГГГГ"
+                  type="date"
+                  onChange={handleChange}
+                  name="date"
+                  value={input?.date}
+                  errors={errors}
+                  fullWidth
+                />
+                {errors?.date && (
+                  <FormHelperText sx={{ ml: { xs: 2, sm: 0 } }} error>
+                    {errors.date}
+                  </FormHelperText>
+                )}
+              </div>
+              <div style={{ width: '100%' }}>
+                <TextField
+                  label="Имя"
+                  id="component-name"
+                  name="name"
+                  placeholder="Ваше имя"
+                  type="text"
+                  onChange={handleChange}
+                  value={input?.name}
+                  errors={errors}
+                  fullWidth
+                />
+                {errors?.name && (
+                  <FormHelperText sx={{ ml: { xs: 2, sm: 0 } }} error>
+                    {errors.name}
+                  </FormHelperText>
+                )}
+              </div>
+              <div style={{ width: '100%' }}>
+                <TextField
+                  label="Телефон"
+                  id="component-simple"
+                  name="phone"
+                  placeholder="+7 (___) ___ - __ - __"
+                  type="tel"
+                  onChange={handleChange}
+                  value={input?.phone}
+                  errors={errors}
+                  fullWidth
+                />
+                {errors?.phone && (
+                  <FormHelperText sx={{ ml: { xs: 2, sm: 0 } }} error>
+                    {errors.phone}
+                  </FormHelperText>
+                )}
+              </div>
+              <div style={{ width: '100%' }}>
+                <TextField
+                  label="Email"
+                  id="component-email"
+                  name="email"
+                  placeholder="Ваш email"
+                  type="text"
+                  onChange={handleChange}
+                  value={input?.email}
+                  errors={errors}
+                  fullWidth
+                />
+                {errors?.email && (
+                  <FormHelperText sx={{ ml: { xs: 2, sm: 0 } }} error>
+                    {errors.email}
+                  </FormHelperText>
+                )}
+              </div>
+              <div style={{ width: '100%' }}>
+                <TextField
+                  label="Отзыв"
+                  id="component-feedback"
+                  name="feedback"
+                  placeholder="Оставьте ваше впечатление"
+                  type="text"
+                  multiline
+                  rows={2}
+                  onChange={handleChange}
+                  value={input?.feedback}
+                  errors={errors}
+                  fullWidth
+                />
+                {errors?.feedback && (
+                  <FormHelperText sx={{ ml: { xs: 2, sm: 0 } }} error>
+                    {errors.feedback}
+                  </FormHelperText>
+                )}
+              </div>
+              <Button
+                color="error"
+                variant="contained"
+                size="small"
+                type="submit"
+                sx={{
+                  my: 4,
+                  fontSize: { xs: '1.2rem', sm: '1.25rem' },
+                  textTransform: 'none',
+                  ml: { xs: 2, sm: 0 },
+                }}
+              >
+                Отправить
+              </Button>
+            </Box>
+          </form>
         </Box>
-      </form>
+      )}
     </Box>
   );
 };
