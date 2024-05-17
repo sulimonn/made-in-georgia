@@ -198,7 +198,7 @@ const Register = ({ handleClose }) => {
                 mt: 4,
                 display: 'flex',
                 justifyContent: 'center',
-                gap: 3,
+                gap: { xs: 1.5, sm: 3 },
                 flexDirection: 'column',
                 width: { xs: '300px', sm: '400px', md: '500px' },
               }}
@@ -215,6 +215,7 @@ const Register = ({ handleClose }) => {
                   value={input?.date}
                   errors={errors}
                   fullWidth
+                  error={errors?.date}
                 />
                 {errors?.date && (
                   <FormHelperText sx={{ ml: { xs: 2, sm: 0 } }} error>
@@ -233,6 +234,7 @@ const Register = ({ handleClose }) => {
                   value={input?.name}
                   errors={errors}
                   fullWidth
+                  error={errors?.name}
                 />
                 {errors?.name && (
                   <FormHelperText sx={{ ml: { xs: 2, sm: 0 } }} error>
@@ -251,6 +253,7 @@ const Register = ({ handleClose }) => {
                   value={input?.phone}
                   errors={errors}
                   fullWidth
+                  error={errors?.phone}
                 />
                 {errors?.phone && (
                   <FormHelperText sx={{ ml: { xs: 2, sm: 0 } }} error>
@@ -269,6 +272,7 @@ const Register = ({ handleClose }) => {
                   value={input?.email}
                   errors={errors}
                   fullWidth
+                  error={errors?.email}
                 />
                 {errors?.email && (
                   <FormHelperText sx={{ ml: { xs: 2, sm: 0 } }} error>
@@ -289,6 +293,7 @@ const Register = ({ handleClose }) => {
                   value={input?.feedback}
                   errors={errors}
                   fullWidth
+                  error={Boolean(errors?.feedback)}
                 />
                 {errors?.feedback && (
                   <FormHelperText sx={{ ml: { xs: 2, sm: 0 } }} error>

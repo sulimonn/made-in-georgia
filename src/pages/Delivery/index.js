@@ -153,7 +153,11 @@ const Delivery = () => {
                     fontWeight="400"
                     component={Link}
                     to="tel:+7 (495) 663-68-68"
-                    sx={{ textDecoration: 'none', display: { xs: 'block', sm: 'inline' } }}
+                    sx={{
+                      textDecoration: 'none',
+                      display: { xs: 'block', sm: 'inline' },
+                      paddingLeft: 0.5,
+                    }}
                     color="text.error"
                   >
                     8 (495) 663-68-68
