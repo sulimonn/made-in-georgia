@@ -167,12 +167,11 @@ const Loyalty = () => {
             sx={{ mb: { xs: 1, sm: 2 } }}
           >
             «Гость MADE IN GEORGIA» <br />
-            При каждой оплате на карту возвращается{' '}
+            При каждой оплате на карту возвращается —{' '}
             <Typography component="span" color="text.error">
               {' '}
-              5%{' '}
+              5%
             </Typography>
-            от суммы.
           </Typography>
           <Typography
             variant="h5"

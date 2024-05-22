@@ -98,7 +98,7 @@ const Intro = () => {
               whiteSpace: 'nowrap', // Ensure the text does not wrap
               display: 'inline-block', // Ensure text remains inline
             }}
-            fontSize={{ xs: '1.5rem', sm: '2rem', md: 'calc(100vw * 0.025)' }}
+            fontSize={{ xs: '1.5rem', sm: '1.9rem', md: 'calc(100vw * 0.02)' }}
             color="error"
             textAlign="center"
             textTransform="uppercase"
