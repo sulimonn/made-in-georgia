@@ -91,7 +91,7 @@ const Intro = () => {
           display: { xs: 'none', sm: 'block' },
         }}
       >
-        <Marquee direction="left">
+        <Marquee direction="left" delay={0}>
           <Typography
             sx={{
               px: { xs: 3, sm: 0 },
