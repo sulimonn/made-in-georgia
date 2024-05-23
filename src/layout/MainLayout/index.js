@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Outlet } from 'react-router-dom';
+import { Outlet, useNavigate, useLocation } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 
 // material-ui
@@ -21,6 +21,7 @@ import Register from 'pages/Register';
 
 const MainLayout = () => {
   const theme = useTheme();
+  const navigate = useNavigate();
   const matchDownLG = useMediaQuery(theme.breakpoints.down('md'));
   const dispatch = useDispatch();
 
@@ -30,10 +31,17 @@ const MainLayout = () => {
 
   const iconBackColor = theme.palette.error.main;
   const iconBackColorOpen = theme.palette.grey[100];
-  // modal open handler
-  const [openModal, setOpenModal] = useState(false);
-  // drawer toggler
+
+  const [openModal, setOpenModal] = useState(openItem === 'feedback');
   const [open, setOpen] = useState(drawerOpen);
+
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    if (pathname === '/feedback') {
+      dispatch(activeItem({ openItem: 'feedback' }));
+    }
+  }, [pathname, dispatch]);
   const handleDrawerToggle = () => {
     setOpen(!open);
     dispatch(openDrawer({ drawerOpen: !open }));
@@ -44,22 +52,21 @@ const MainLayout = () => {
   }, [drawerOpen]);
 
   useEffect(() => {
-    setOpenModal(openItem[0] === 'feedback' || openItem === 'feedback');
-  }, [openItem]);
+    setOpenModal(openItem === 'feedback' || pathname === '/feedback');
+  }, [openItem, pathname]);
 
   useEffect(() => {
-    // Simulate loading delay
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 2000);
+    }, 100);
 
-    // Clear the timer when the component unmounts or when loading is done
     return () => clearTimeout(timer);
   }, []);
 
   const handleClose = () => {
     dispatch(activeItem({ openItem: 'home' }));
     setOpenModal(false);
+    if (openModal) navigate('/');
   };
   if (loading)
     return (

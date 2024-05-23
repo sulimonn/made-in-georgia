@@ -17,6 +17,10 @@ const MainRoutes = {
       path: '/',
       element: <Pages />,
     },
+    {
+      path: '/feedback',
+      element: <Pages />,
+    },
   ],
 };
 

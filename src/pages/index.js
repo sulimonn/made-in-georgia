@@ -16,16 +16,6 @@ const Pages = () => {
       <Intro />
       <Promotion />
       <Loyalty />
-      {/* <Typography
-        sx={{ px: { xs: 3, sm: 0 } }}
-        variant={isSmallScreen ? 'h4' : 'h1'}
-        fontSize={isSmallScreen ? '1.25rem' : 'calc(100vw * 0.03)'}
-        color="error"
-        textAlign="center"
-        textTransform="uppercase"
-      >
-        блюда с исконно - грузинским акцентом по старинным рецептам.
-      </Typography> */}
       <Box py={{ xs: 3, sm: 10 }}>
         <img
           src={Panoram}

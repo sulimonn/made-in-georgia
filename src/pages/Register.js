@@ -1,44 +1,6 @@
 import React from 'react';
 import { Box, Typography, Button, FormHelperText, TextField } from '@mui/material';
 import { CloseOutlined } from '@ant-design/icons';
-// const StyledInput = ({ label, ...props }) => {
-//   const inputProps = { ...props };
-//   delete inputProps.errors;
-
-//   return (
-//     <Box>
-//       <InputLabel
-//         sx={{ color: 'text.primary', fontSize: '1rem', ml: { xs: 2, sm: 0 } }}
-//         htmlFor={label}
-//       >
-//         {label}
-//       </InputLabel>
-//       <input
-//         {...props}
-//         style={{
-//           width: '100%',
-//           padding: '10px',
-//           borderTop: 'none',
-//           borderRight: 'none',
-//           borderLeft: 'none',
-//           borderBottom: '1px solid #ccc',
-//           borderRadius: '0px',
-//           background: 'none',
-//           outline: 'none',
-//           color: Boolean(props?.errors?.phoneNumber) ? 'red' : 'inherit',
-//           fontSize: '2rem',
-//           fontFamily: 'inherit',
-//           paddingLeft: '9vw',
-//         }}
-//       />
-//       {props.errors?.phoneNumber && (
-//         <FormHelperText sx={{ ml: { xs: 2, sm: 0 } }} error>
-//           {props.errors.phoneNumber}
-//         </FormHelperText>
-//       )}
-//     </Box>
-//   );
-// };
 
 const Register = ({ handleClose }) => {
   const [input, setInput] = React.useState({

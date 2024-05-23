@@ -39,7 +39,8 @@ const pages = {
       id: 'feedback',
       title: 'Обратная связь',
       type: 'item',
-      url: '#feedback',
+      url: '/feedback',
+      target: '_self',
       modal: true,
     },
     {

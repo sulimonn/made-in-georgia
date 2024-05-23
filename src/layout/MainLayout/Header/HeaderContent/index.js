@@ -15,7 +15,7 @@ const HeaderContent = () => {
   const matchesMd = useMediaQuery((theme) => theme.breakpoints.down('md'));
 
   const navs = menuItems.items;
-  const openItem = useSelector((state) => state.nav.openItem);
+  const { openItem } = useSelector((state) => state.nav);
   const linkProps = { activeClass: 'active', spy: true, smooth: true, duration: 500, offset: -110 };
 
   const setOpenItem = (id) => {
@@ -41,8 +41,8 @@ const HeaderContent = () => {
             group.children.map((item) => {
               return (
                 <Typography
-                  {...(item?.target || item?.modal ? null : linkProps)}
-                  to={item?.modal ? null : item?.target ? item.url : item.url.replace('#', '')}
+                  {...(item?.target || linkProps)}
+                  to={item?.target ? item.url : item.url.replace('#', '')}
                   key={item.id}
                   onClick={() => setOpenItem(item.id)}
                   variant="h3"
