@@ -123,8 +123,11 @@ const MainLayout = () => {
           alignItems: 'center',
           justifyContent: 'center',
         }}
+        disableScrollLock
       >
-        <Register handleClose={handleClose} />
+        <Box>
+          <Register handleClose={handleClose} />
+        </Box>
       </Modal>
     </>
   );

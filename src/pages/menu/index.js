@@ -7,7 +7,6 @@ import {
   Typography,
   Box,
   useMediaQuery,
-  Divider,
   Tabs,
   Tab,
   Accordion as MUIAccordion,
@@ -37,7 +36,7 @@ const Menu = () => {
         }
       },
       {
-        threshold: 0.4,
+        threshold: 0.5,
       },
     );
 
@@ -171,6 +170,10 @@ const Menu = () => {
         sx={{
           ml: { xs: 1, sm: 0 },
           overflow: 'visible',
+          '& .MuiTabs-flexContainer': {
+            display: 'flex',
+            justifyContent: 'space-between',
+          },
           '&MuiTabs-scroller': {
             overflow: 'visible !important',
           },
@@ -184,18 +187,8 @@ const Menu = () => {
           fontWeight="500"
           component={Tab}
           value={0}
-          label="Меню"
+          label="Кухня"
           sx={{ px: 0 }}
-        />
-        <Divider
-          sx={{
-            borderWidth: { xs: 2, sm: 4 },
-            my: { xs: 2, sm: 2.5 },
-            mx: { xs: 0, sm: 1, md: 3 },
-          }}
-          orientation="vertical"
-          variant="middle"
-          flexItem
         />
         <Typography
           fontSize={{ xs: '1.5em', sm: '3em' }}
@@ -206,7 +199,7 @@ const Menu = () => {
           maxWidth="unset"
           sx={{ overflow: 'visible', px: { xs: 2, sm: 0 } }}
           value={1}
-          label="Напитки/барная карта"
+          label="Барная карта"
         />
       </Tabs>
 

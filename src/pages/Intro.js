@@ -1,6 +1,6 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
-import Marquee from 'react-double-marquee';
+import Marquee from 'utils/TrickerText';
 import IntroPic from 'assets/images/intro.jpg';
 import { Box, Typography, useMediaQuery } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
@@ -22,7 +22,7 @@ const Intro = () => {
         }
       },
       {
-        threshold: 0.4,
+        threshold: 0.5,
       },
     );
 
@@ -84,28 +84,28 @@ const Intro = () => {
         sx={{
           position: 'absolute',
           bottom: '0%',
-          width: '100%',
-          overflow: 'hidden',
-          whiteSpace: 'nowrap',
           backgroundColor: '#00000060',
-          display: { xs: 'none', sm: 'block' },
+          zIndex: 0,
+          display: { xs: 'none', md: 'block' },
         }}
       >
-        <Marquee direction="left" delay={0}>
-          <Typography
-            sx={{
-              px: { xs: 3, sm: 0 },
-              whiteSpace: 'nowrap', // Ensure the text does not wrap
-              display: 'inline-block', // Ensure text remains inline
-            }}
-            fontSize={{ xs: '1.5rem', sm: '1.9rem', md: 'calc(100vw * 0.02)' }}
-            color="error"
-            textAlign="center"
-            textTransform="uppercase"
-          >
-            блюда с исконно - грузинским акцентом по старинным рецептам
-          </Typography>
-        </Marquee>
+        <Box sx={{ width: '100%', height: '100%' }}>
+          <Marquee>
+            <Typography
+              sx={{
+                px: { xs: 3, sm: 0 },
+                display: 'inline-block',
+                whiteSpace: 'nowrap',
+                width: 'min-content',
+              }}
+              fontSize={{ xs: '1.5rem', sm: '1.9rem', md: 'calc(100vw * 0.02)' }}
+              color="error"
+              textTransform="uppercase"
+            >
+              блюда с исконно - грузинским акцентом по старинным рецептам
+            </Typography>
+          </Marquee>
+        </Box>
       </Box>
     </Box>
   );

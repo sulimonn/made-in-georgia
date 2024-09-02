@@ -79,7 +79,7 @@ const Footer = () => {
               Адрес: 1-й Красногвардейский пр-д,19, 2 этаж
             </Typography>
             <Typography variant={matchDownMD ? 'h6' : 'h5'} sx={{ mb: 1.5 }}>
-              ГРАФИК РАБОТЫ: С 11:00 - 22:00
+              ГРАФИК РАБОТЫ: С 11:00 - 23:00
             </Typography>
             <Box sx={{ display: { xs: 'block', md: 'none' } }}>{FooterContent(matchDownMD)}</Box>
           </Grid>

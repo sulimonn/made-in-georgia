@@ -26,7 +26,6 @@ const Header = ({ open, handleDrawerToggle }) => {
     position: 'fixed',
     width: '100%',
     color: 'inherit',
-    backgroundColor: '#00000050',
     elevation: 0,
   };
 
@@ -37,9 +36,7 @@ const Header = ({ open, handleDrawerToggle }) => {
           {mainHeader}
         </AppBarStyled>
       ) : (
-        <AppBarStyled {...appBar} backgroundColor="transparent">
-          {mainHeader}
-        </AppBarStyled>
+        <AppBarStyled {...appBar}>{mainHeader}</AppBarStyled>
       )}
     </>
   );

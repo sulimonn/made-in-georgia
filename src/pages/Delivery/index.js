@@ -191,7 +191,7 @@ const Delivery = () => {
                   sx={{ pt: 0.5 }}
                   fontSize={{ xs: '1.2em', sm: '1.2em' }}
                 >
-                  Время приема заказов с 11:00-22:00
+                  Время приема заказов с 11:00-23:00
                 </Typography>
                 <Typography
                   variant="h4"
@@ -226,7 +226,7 @@ const Delivery = () => {
                   Ваш заказ будет готов к выдаче в ресторане
                 </Typography>
                 <Typography variant="h5" fontWeight="400" sx={{ pt: 0.5 }}>
-                  График работы: с 11:00 до 22:00
+                  График работы: с 11:00 до 23:00
                 </Typography>
                 <Typography variant="h5" fontWeight="400" sx={{ pt: 0.5 }}>
                   Адрес: 1-й Красногвардейский пр-д,19, 2 этаж
