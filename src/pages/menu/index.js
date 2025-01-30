@@ -63,7 +63,7 @@ const Menu = () => {
   const accordion = (item) => (
     <MUIAccordion
       key={item.id}
-      expanded={expanded === item.id}
+      expanded={expanded.toString().includes(item.id)}
       onChange={handleChange(item.id)}
       sx={{
         '&.Mui-expanded::before': {
@@ -97,7 +97,7 @@ const Menu = () => {
       >
         <Box display="flex" justifyContent="space-between" alignItems="center" width="100%">
           <Typography
-            variant={isSmallScreen ? 'h5' : 'h3'}
+            variant={item.level === 1 ? (isSmallScreen ? 'h5' : 'h3') : isSmallScreen ? 'h6' : 'h4'}
             alignSelf="center"
             lineHeight={0.9}
             textTransform="uppercase"
@@ -115,43 +115,47 @@ const Menu = () => {
           py: { xs: 0, sm: 1.5 },
         }}
       >
-        {item.children.map((child) => (
-          <Box
-            key={child.id}
-            display="flex"
-            justifyContent="space-between"
-            alignItems="center"
-            sx={{
-              position: 'relative',
-              pr: { xs: 2, sm: 2 },
-              pl: { xs: 3, sm: 0 },
-              py: { xs: 1, sm: 0.5 },
+        {item.children.map((child) =>
+          child.children ? (
+            accordion(child)
+          ) : (
+            <Box
+              key={child.id}
+              display="flex"
+              justifyContent="space-between"
+              alignItems="center"
+              sx={{
+                position: 'relative',
+                pr: { xs: 2, sm: 2 },
+                pl: { xs: 3, sm: 0 },
+                py: { xs: 1, sm: 0.5 },
 
-              '&::before': {
-                content: "''",
-                position: 'absolute',
-                right: 0,
-                bottom: 0,
-                left: 0,
-                height: '1px',
-                width: '100%',
-                backgroundColor: 'grey.600',
-              },
-              '&:last-child::before': {
-                display: 'none',
-              },
-            }}
-          >
-            <Typography variant={isSmallScreen ? 'h6' : 'h4'} fontWeight="400">
-              {child.title}
-            </Typography>
-            <Typography variant={isSmallScreen ? 'subtitle2' : 'h5'} fontWeight="400">
-              {child.mass}
-              {child.mass !== '' && '/'}
-              {child.price}
-            </Typography>
-          </Box>
-        ))}
+                '&::before': {
+                  content: "''",
+                  position: 'absolute',
+                  right: 0,
+                  bottom: 0,
+                  left: 0,
+                  height: '1px',
+                  width: '100%',
+                  backgroundColor: 'grey.600',
+                },
+                '&:last-child::before': {
+                  display: 'none',
+                },
+              }}
+            >
+              <Typography variant={isSmallScreen ? 'h6' : 'h4'} fontWeight="400">
+                {child.title}
+              </Typography>
+              <Typography variant={isSmallScreen ? 'subtitle2' : 'h5'} fontWeight="400">
+                {child.mass}
+                {child.mass !== '' && '/'}
+                {child.price}
+              </Typography>
+            </Box>
+          ),
+        )}
       </AccordionDetails>
     </MUIAccordion>
   );

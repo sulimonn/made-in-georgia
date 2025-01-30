@@ -54,11 +54,17 @@ const Promotion = () => {
       </Typography>
       <Grid container spacing={{ xs: 2, sm: 10 }} pt={6}>
         {images.map((image, index) => (
-          <Grid item xs={12} sm={6} key={index} sx={{ overflow: 'hidden' }}>
+          <Grid
+            item
+            xs={12}
+            sm={6}
+            key={index}
+            sx={{ overflow: 'hidden', maxHeight: { xs: '300px', sm: 550 } }}
+          >
             <img
               src={image}
               alt="promotion"
-              style={{ width: '100%', objectFit: 'contain' }}
+              style={{ width: '100%', height: '100%', objectFit: 'contain' }}
               loading="lazy"
             />
           </Grid>
