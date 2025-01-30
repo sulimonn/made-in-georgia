@@ -5,6 +5,7 @@ const initialState = {
     {
       title: 'БЕЗАЛКОГОЛЬНЫЕ КОКТЕЙЛИ',
       id: 'non-alcoholic-cocktails',
+      level: 1,
       children: [
         {
           title: 'Мохито Классический',
@@ -22,6 +23,7 @@ const initialState = {
     },
     {
       title: 'МОЛОЧНЫЕ КОКТЕЙЛИ',
+      level: 1,
       id: 'milkshakes',
       children: [
         {
@@ -47,6 +49,7 @@ const initialState = {
     {
       title: 'СВЕЖЕВЫЖАТЫЕ СОКИ',
       id: 'fresh-pressed-juices',
+      level: 1,
       children: [
         {
           title: 'Яблочный',
@@ -77,6 +80,7 @@ const initialState = {
     {
       title: 'ДОМАШНИЕ ЛИМОНАДЫ',
       id: 'homemade-lemonades',
+      level: 1,
       children: [
         {
           title: 'Манго-маракуйя',
@@ -113,6 +117,7 @@ const initialState = {
     {
       title: 'НАПИТКИ',
       id: 'drinks',
+      level: 1,
       children: [
         {
           title: 'Байкал без газа',
@@ -215,6 +220,7 @@ const initialState = {
     {
       title: 'КОФЕ',
       id: 'coffee',
+      level: 1,
       children: [
         {
           title: 'Эспрессо',
@@ -269,6 +275,7 @@ const initialState = {
     {
       title: 'АЛЬТЕРНАТИВНОЕ МОЛОКО',
       id: 'alternative-milk',
+      level: 1,
       children: [
         {
           title: 'Кокосовое',
@@ -287,6 +294,7 @@ const initialState = {
     {
       title: 'ФРУКТОВЫЕ ЧАИ',
       id: 'fruit-teas',
+      level: 1,
       children: [
         {
           title: 'Имбирный',
@@ -317,6 +325,7 @@ const initialState = {
     {
       title: 'ЧАЙ',
       id: 'tea',
+      level: 1,
       children: [
         {
           title: 'Ассам',
@@ -383,6 +392,7 @@ const initialState = {
     {
       title: 'ВЕРМУТЫ',
       id: 'vermouths',
+      level: 1,
       children: [
         {
           title: 'Martini Bianco Италия',
@@ -407,6 +417,7 @@ const initialState = {
     {
       title: 'ШАМПАНСКОЕ',
       id: 'champagne',
+      level: 1,
       children: [
         {
           title: 'Moet & Chandon Brut Imperial Франция',
@@ -425,6 +436,7 @@ const initialState = {
     {
       title: 'ИГРИСТЫЕ ВИНА',
       id: 'sparkling-wines',
+      level: 1,
       children: [
         {
           title: 'Josep Ventosa Cava Brut Rose Испания',
@@ -455,6 +467,7 @@ const initialState = {
     {
       title: 'БЕЛЫЕ ВИНА',
       id: 'white-wines',
+      level: 1,
       children: [
         {
           title: 'Fantinel Pinot Grigio Borgo Tesis бел/сух Италия',
@@ -485,6 +498,7 @@ const initialState = {
     {
       title: 'КРАСНЫЕ ВИНА',
       id: 'red-wines',
+      level: 1,
       children: [
         {
           title: 'KWV Classic Shiraz Keyx OAP',
@@ -533,6 +547,7 @@ const initialState = {
     {
       title: 'ВИНА В БОКАЛЕ',
       id: 'wines-by-the-glass',
+      level: 1,
       children: [
         {
           title: 'Tsinandali бел/сух Грузия',
@@ -557,6 +572,7 @@ const initialState = {
     {
       title: 'ЧАЧА',
       id: 'chacha',
+      level: 1,
       children: [
         {
           title: 'Askaneli Грузия',
@@ -575,6 +591,7 @@ const initialState = {
     {
       title: 'ВОДКА',
       id: 'vodka',
+      level: 1,
       children: [
         {
           title: 'Finlandia клюква 1 грейпфрут | классика Финляндия',
@@ -599,6 +616,7 @@ const initialState = {
     {
       title: 'POM',
       id: 'pom',
+      level: 1,
       children: [
         {
           title: 'Bayou White CA',
@@ -623,6 +641,7 @@ const initialState = {
     {
       title: 'ТЕКИЛА',
       id: 'tequila',
+      level: 1,
       children: [
         {
           title: 'Olmeca Silver',
@@ -641,6 +660,7 @@ const initialState = {
     {
       title: 'ДЖИН',
       id: 'gin',
+      level: 1,
       children: [
         {
           title: 'Ben Lomond',
@@ -653,6 +673,7 @@ const initialState = {
     {
       title: 'ВИСКИ',
       id: 'whiskey',
+      level: 1,
       children: [
         {
           title: 'Proper Twelve',
@@ -689,6 +710,7 @@ const initialState = {
     {
       title: 'КОНЬЯК',
       id: 'cognac',
+      level: 1,
       children: [
         {
           title: 'Askaneli VSOP Грузия',
@@ -725,6 +747,7 @@ const initialState = {
     {
       title: 'ЛИКЕРЫ',
       id: 'liqueurs',
+      level: 1,
       children: [
         {
           title: 'Aperol',
@@ -779,6 +802,7 @@ const initialState = {
     {
       title: 'ПИВО',
       id: 'beer',
+      level: 1,
       children: [
         {
           title: 'Leffe светлое Бельгия',
@@ -815,6 +839,7 @@ const initialState = {
     {
       title: 'АЛКОГОЛЬНЫЕ КОКТЕЙЛИ',
       id: 'cocktails',
+      level: 1,
       children: [
         {
           title: 'Aperol Spritz',
@@ -857,6 +882,7 @@ const initialState = {
     {
       title: 'ШОТЫ',
       id: 'shots',
+      level: 1,
       children: [
         {
           title: 'Б-52',
