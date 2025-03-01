@@ -7,7 +7,7 @@ import { useTheme } from '@mui/material/styles';
 import Logo from 'components/Logo/Logo';
 import { activeItem } from 'store/reducers/nav';
 
-const Loyalty = () => {
+const Loyalty = ({ loyalty }) => {
   const theme = useTheme();
   const isSM = useMediaQuery(theme.breakpoints.up('sm'), {});
   const dispatch = useDispatch();
@@ -118,6 +118,7 @@ const Loyalty = () => {
           >
             ПРОГРАММА ЛОЯЛЬНОСТИ
           </Typography>
+
           <Typography
             variant="h5"
             color="text.primary"
@@ -155,10 +156,20 @@ const Loyalty = () => {
             fontWeight="500"
             fontSize={{ xs: '1rem', sm: '1.3rem', md: '1.4rem' }}
             sx={{ mb: { xs: 1.2, sm: 2.2 } }}
+            whiteSpace="pre-wrap"
+          >
+            {loyalty?.text}
+          </Typography>
+          {/*<Typography
+            variant="h5"
+            color="text.primary"
+            fontWeight="500"
+            fontSize={{ xs: '1rem', sm: '1.3rem', md: '1.4rem' }}
+            sx={{ mb: { xs: 1.2, sm: 2.2 } }}
           >
             Уровни участия в программе:
           </Typography>
-          <Typography
+           <Typography
             variant="h5"
             color="text.primary"
             fontWeight="500"
@@ -202,7 +213,7 @@ const Loyalty = () => {
             <Typography component="span" color="text.error">
               15%
             </Typography>
-          </Typography>
+          </Typography> */}
         </Box>
       </Box>
       <Box width="100%" display="flex" justifyContent="center" pt={{ xs: 0, sm: 4 }}>
