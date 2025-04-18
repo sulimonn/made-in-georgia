@@ -37,7 +37,7 @@ const MainLayout = () => {
 
   const { pathname } = useLocation();
 
-  window.location.replace('https://madeingeorgia.ru');
+
   useEffect(() => {
     if (pathname === '/feedback') {
       dispatch(activeItem({ openItem: 'feedback' }));
