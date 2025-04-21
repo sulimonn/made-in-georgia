@@ -1,5 +1,5 @@
 
-Made in Georgia 🧵🇬🇪
+Made in Georgia 
 ====================
 
 This is a React.js application showcasing products or services made in Georgia. It is built with Vite for fast development and optimized builds.
