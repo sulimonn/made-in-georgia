@@ -7,7 +7,11 @@ import { useTheme } from '@mui/material/styles';
 import Logo from 'components/Logo/Logo';
 import { activeItem } from 'store/reducers/nav';
 
+<<<<<<< HEAD
 const Loyalty = ({ loyalty }) => {
+=======
+const Loyalty = () => {
+>>>>>>> bf8cca8 (Initial commit to second branch)
   const theme = useTheme();
   const isSM = useMediaQuery(theme.breakpoints.up('sm'), {});
   const dispatch = useDispatch();
@@ -118,7 +122,10 @@ const Loyalty = ({ loyalty }) => {
           >
             ПРОГРАММА ЛОЯЛЬНОСТИ
           </Typography>
+<<<<<<< HEAD
 
+=======
+>>>>>>> bf8cca8 (Initial commit to second branch)
           <Typography
             variant="h5"
             color="text.primary"
@@ -156,6 +163,7 @@ const Loyalty = ({ loyalty }) => {
             fontWeight="500"
             fontSize={{ xs: '1rem', sm: '1.3rem', md: '1.4rem' }}
             sx={{ mb: { xs: 1.2, sm: 2.2 } }}
+<<<<<<< HEAD
             whiteSpace="pre-wrap"
           >
             {loyalty?.text}
@@ -170,6 +178,12 @@ const Loyalty = ({ loyalty }) => {
             Уровни участия в программе:
           </Typography>
            <Typography
+=======
+          >
+            Уровни участия в программе:
+          </Typography>
+          <Typography
+>>>>>>> bf8cca8 (Initial commit to second branch)
             variant="h5"
             color="text.primary"
             fontWeight="500"
@@ -213,7 +227,11 @@ const Loyalty = ({ loyalty }) => {
             <Typography component="span" color="text.error">
               15%
             </Typography>
+<<<<<<< HEAD
           </Typography> */}
+=======
+          </Typography>
+>>>>>>> bf8cca8 (Initial commit to second branch)
         </Box>
       </Box>
       <Box width="100%" display="flex" justifyContent="center" pt={{ xs: 0, sm: 4 }}>

@@ -9,6 +9,7 @@ import Panoram from 'assets/images/панорама.jpg';
 import Menu from './menu';
 import Delivery from './Delivery/index';
 import Intro from './Intro';
+<<<<<<< HEAD
 import { useGetPostsQuery } from 'store/reducers/api';
 import Loader from 'components/Loader';
 
@@ -23,6 +24,15 @@ const Pages = () => {
       <Intro />
       {data?.promo && <Promotion promo={data?.promo} />}
       <Loyalty loyalty={data?.loyalty} />
+=======
+
+const Pages = () => {
+  return (
+    <>
+      <Intro />
+      <Promotion />
+      <Loyalty />
+>>>>>>> bf8cca8 (Initial commit to second branch)
       <Box py={{ xs: 3, sm: 10 }}>
         <img
           src={Panoram}
@@ -31,7 +41,11 @@ const Pages = () => {
           loading="lazy"
         />
       </Box>
+<<<<<<< HEAD
       <Menu menu={data?.all_food} />
+=======
+      <Menu />
+>>>>>>> bf8cca8 (Initial commit to second branch)
       <Delivery />
     </>
   );

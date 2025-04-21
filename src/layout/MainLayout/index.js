@@ -37,12 +37,19 @@ const MainLayout = () => {
 
   const { pathname } = useLocation();
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> bf8cca8 (Initial commit to second branch)
   useEffect(() => {
     if (pathname === '/feedback') {
       dispatch(activeItem({ openItem: 'feedback' }));
     }
+<<<<<<< HEAD
   }, [pathname, dispatch, navigate]);
+=======
+  }, [pathname, dispatch]);
+>>>>>>> bf8cca8 (Initial commit to second branch)
   const handleDrawerToggle = () => {
     setOpen(!open);
     dispatch(openDrawer({ drawerOpen: !open }));
