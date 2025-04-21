@@ -1,8 +1,8 @@
 
-Made in Georgia 
+Made in Georgia 🇬🇪
 ====================
 
-This is a React.js application showcasing products or services made in Georgia. It is built with Vite for fast development and optimized builds.
+This is a React.js application showcasing foods made in Georgia. It is built using Create React App (CRA) or a custom setup without Vite.
 
 Tech Stack
 ----------
@@ -20,7 +20,7 @@ Prerequisites:
 Installation:
 
 1. Clone the repository:
-   git clone https://github.com/your-username/made-in-georgia.git
+   git clone https://github.com/sulimonn/made-in-georgia.git
 
 2. Navigate into the project folder:
    cd made-in-georgia
@@ -33,9 +33,9 @@ Installation:
 Development:
 
 Start the development server:
-   npm run dev
+   npm start
    # or
-   yarn dev
+   yarn start
 
 Visit http://localhost:3000 to view the app.
 
@@ -46,11 +46,6 @@ To create an optimized production build:
    # or
    yarn build
 
-Preview Production Build:
-   npm run preview
-   # or
-   yarn preview
-
 License
 -------
 This project is licensed under the MIT License.
@@ -58,3 +53,4 @@ This project is licensed under the MIT License.
 Author
 ------
 Sulaiman Sadykov
+Demir Kyrgyz International Bank
