@@ -1,24 +1,12 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
-<<<<<<< HEAD
-=======
 import Promo1 from 'assets/images/promotions/promo1.jpg';
 import Promo2 from 'assets/images/promotions/promo2.jpg';
->>>>>>> bf8cca8 (Initial commit to second branch)
 
 import { Box, Typography, Grid, useMediaQuery } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
 import { activeItem } from 'store/reducers/nav';
 
-<<<<<<< HEAD
-const Promotion = ({ promo: promos = [] }) => {
-  const theme = useTheme();
-  const matchDownMD = useMediaQuery(theme.breakpoints.down('lg'));
-
-  const dispatch = useDispatch();
-  const formRef = React.useRef(null);
-  console.log(promos);
-=======
 const Promotion = () => {
   const theme = useTheme();
   const matchDownMD = useMediaQuery(theme.breakpoints.down('lg'));
@@ -26,7 +14,6 @@ const Promotion = () => {
 
   const dispatch = useDispatch();
   const formRef = React.useRef(null);
->>>>>>> bf8cca8 (Initial commit to second branch)
 
   React.useEffect(() => {
     const observer = new IntersectionObserver(
@@ -66,11 +53,7 @@ const Promotion = () => {
         Акции
       </Typography>
       <Grid container spacing={{ xs: 2, sm: 10 }} pt={6}>
-<<<<<<< HEAD
-        {promos.map((promo, index) => (
-=======
         {images.map((image, index) => (
->>>>>>> bf8cca8 (Initial commit to second branch)
           <Grid
             item
             xs={12}
@@ -79,11 +62,7 @@ const Promotion = () => {
             sx={{ overflow: 'hidden', maxHeight: { xs: '300px', sm: 550 } }}
           >
             <img
-<<<<<<< HEAD
-              src={'/media/' + promo.photo_url}
-=======
               src={image}
->>>>>>> bf8cca8 (Initial commit to second branch)
               alt="promotion"
               style={{ width: '100%', height: '100%', objectFit: 'contain' }}
               loading="lazy"
